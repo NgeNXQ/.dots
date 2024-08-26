@@ -20,9 +20,10 @@
 	"editor.scrollbar.vertical": "hidden",
 	"editor.scrollbar.horizontal": "hidden",
 	"editor.fontFamily": "JetBrainsMono Nerd Font",
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
 	"explorer.compactFolders": false,
 	"explorer.fileNesting.expand": false,
-	"explorer.confirmDragAndDrop": false,
 	"explorer.autoReveal": "focusNoScroll",
 	"debug.inlineValues": "on",
 	"debug.openDebug": "neverOpen",
@@ -32,6 +33,19 @@
 	"git.openRepositoryInParentFolders": "always",
 	"security.workspace.trust.untrustedFiles": "open",
 	"dotnetAcquisitionExtension.enableTelemetry": false,
+	"files.exclude": {
+		"**/.DS_Store": false,
+		"**/.git": false,
+		"**/.hg": false,
+		"**/.svn": false,
+		"**/CVS": false,
+		"**/Thumbs.db": false
+	},
+	"search.exclude": {
+		"**/*.code-search": false,
+		"**/bower_components": false,
+		"**/node_modules": false
+	},
 	"glassit.alpha": 200,
 	"color-highlight.matchWords": true,
 	"color-highlight.markerType": "dot-before",

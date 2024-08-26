@@ -1,0 +1,68 @@
+.tab {
+    border-radius: 6px 6px 0px 0px !important;
+}
+
+.slider {
+    display: none !important;
+}
+
+.shortcuts {
+    display: none !important;
+}
+
+.window-title {
+    display: none !important;
+}
+
+.window-appicon {
+    display: none !important;
+}
+
+.tabs-container {
+    cursor: default !important;
+}
+
+.scrollbar.vertical {
+    display: none !important;
+}
+
+.scrollbar.horizonal {
+    display: none !important;
+}
+
+.quick-input-widget {
+    top: 50% !important;
+    left: 50% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.decorationsOverviewRuler {
+    display: none !important;
+}
+
+.xterm-decoration-overview-ruler {
+    display: none !important;
+}
+
+.composite.title.has-composite-bar {
+    padding: 0px !important;
+}
+
+.composite.title:not(.has-composite-bar) {
+    -webkit-app-region: drag !important;
+}
+
+.tree-explorer-viewlet-tree-view .message {
+    display: none !important;
+}
+
+.composite.title:not(.has-composite-bar)>* {
+    display: none !important;
+}
+
+.title.tabs.show-file-icons {
+    cursor: default !important;
+    -webkit-app-region: drag !important;
+}

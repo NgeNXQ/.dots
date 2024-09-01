@@ -6,6 +6,10 @@
     display: none !important;
 }
 
+.message {
+    display: none !important;
+}
+
 .shortcuts {
     display: none !important;
 }
@@ -20,6 +24,10 @@
 
 .tabs-container {
     cursor: default !important;
+}
+
+.includes-excludes {
+    display: none !important;
 }
 
 .scrollbar.vertical {
@@ -52,10 +60,6 @@
 
 .composite.title:not(.has-composite-bar) {
     -webkit-app-region: drag !important;
-}
-
-.tree-explorer-viewlet-tree-view .message {
-    display: none !important;
 }
 
 .composite.title:not(.has-composite-bar)>* {

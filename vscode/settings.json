@@ -1,4 +1,5 @@
 {
+	"search.mode": "reuseEditor",
 	"breadcrumbs.enabled": false,
 	"window.commandCenter": false,
 	"window.titleBarStyle": "native",

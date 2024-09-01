@@ -15,6 +15,7 @@
 	"workbench.list.smoothScrolling": true,
 	"workbench.activityBar.location": "hidden",
 	"editor.fontSize": 14,
+	"editor.fontLigatures": true,
 	"editor.indentSize": "tabSize",
 	"editor.smoothScrolling": true,
 	"editor.minimap.enabled": false,

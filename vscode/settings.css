@@ -34,16 +34,12 @@
     display: none !important;
 }
 
-.scrollbar.horizonal {
-    display: none !important;
+.quick-input-widget {
+    top: 35% !important;
 }
 
-.quick-input-widget {
-    top: 50% !important;
-    left: 50% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    transform: translate(-50%, -50%) !important;
+.scrollbar.horizonal {
+    display: none !important;
 }
 
 .decorationsOverviewRuler {

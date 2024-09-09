@@ -1,5 +1,5 @@
 .tab {
-    border-radius: 6px 6px 0px 0px !important;
+    border-radius: 5px 5px 0px 0px !important;
 }
 
 .slider {
@@ -36,6 +36,7 @@
 
 .quick-input-widget {
     top: 35% !important;
+    outline: 1px solid var(--vscode-focusBorder, var(--vscode-input-border)) !important;
 }
 
 .scrollbar.horizonal {
@@ -58,7 +59,24 @@
     -webkit-app-region: drag !important;
 }
 
-.composite.title:not(.has-composite-bar)>* {
+/* .composite.title:not(.has-composite-bar)>* {
+    display: none !important;
+} */
+
+[id^="workbench.parts"] .composite.title:not(.has-composite-bar)>* {
+    display: none !important;
+}
+
+[id^="workbench.parts"]:has(.content .explorer-viewlet) .composite.title>*:first-child {
+    display: block !important;
+}
+
+[id^="workbench.parts"]:has(.content .explorer-viewlet) .composite.title:first-child h2 {
+    text-transform: none !important;
+    transform: translateY(5%) !important;
+}
+
+[id^="workbench.parts"]:has(.content .explorer-viewlet) .composite.title>*:not(:first-child) {
     display: none !important;
 }
 

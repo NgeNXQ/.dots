@@ -4,6 +4,7 @@
 	"window.commandCenter": false,
 	"window.titleBarStyle": "native",
 	"window.menuBarVisibility": "toggle",
+	"window.title": "~\\${activeFolderMedium}",
 	"workbench.tree.indent": 20,
 	"workbench.editor.enablePreview": false,
 	"workbench.layoutControl.enabled": false,
@@ -43,7 +44,7 @@
 		"**/.vscode": true,
 		"**/.plastic": true,
 	},
-	"glassit.alpha": 200,
+	"glassit.alpha": 225,
 	"color-highlight.matchWords": true,
 	"color-highlight.markerType": "dot-before",
 	"workbench.colorTheme": "Gruvbox Dark Hard",
@@ -54,6 +55,7 @@
 	},
 	"apc.imports": [
 		"/C:/Users/NgenX/AppData/Roaming/Code/User/settings.css",
+		"/C:/Users/NgenX/AppData/Roaming/Code/User/explorerTitleHandler.js",
 		"file:///c:/Users/NgenX/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
 	],
 	"apc.font.family": "JetBrainsMono Nerd Font",

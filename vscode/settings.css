@@ -14,6 +14,10 @@
     display: none !important;
 }
 
+.line-numbers {
+    left: 5px !important;
+}
+
 .window-title {
     display: none !important;
 }

@@ -55,6 +55,7 @@
 	"workbench.iconTheme": "gruvbox-material-icon-theme",
 	"animations.Smooth-Mode": false,
 	"animations.Install-Method": "Apc Customize UI++",
+	"breakpointHighlight.backgroundColor": "#AC5954AA",
 	"apc.electron": {
 		"titleBarStyle": "hidden",
 	},

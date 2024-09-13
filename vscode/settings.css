@@ -14,8 +14,8 @@
     display: none !important;
 }
 
-.line-numbers {
-    left: 5px !important;
+.diffViewport {
+    display: none !important;
 }
 
 .window-title {
@@ -28,6 +28,10 @@
 
 .tabs-container {
     cursor: default !important;
+}
+
+.dirty-diff-glyph {
+    display: none !important;
 }
 
 .includes-excludes {
@@ -51,8 +55,16 @@
     display: none !important;
 }
 
+.monaco-editor .line-numbers {
+    left: 5px !important;
+}
+
 .xterm-decoration-overview-ruler {
     display: none !important;
+}
+
+.monaco-diff-editor .line-numbers {
+    left: 10px !important;
 }
 
 .composite.title.has-composite-bar {
@@ -62,10 +74,6 @@
 .composite.title:not(.has-composite-bar) {
     -webkit-app-region: drag !important;
 }
-
-/* .composite.title:not(.has-composite-bar)>* {
-    display: none !important;
-} */
 
 [id^="workbench.parts"] .composite.title:not(.has-composite-bar)>* {
     display: none !important;

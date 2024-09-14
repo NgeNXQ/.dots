@@ -41,9 +41,9 @@
 	"telemetry.telemetryLevel": "off",
 	"diffEditor.renderIndicators": false,
 	"diffEditor.renderGutterMenu": false,
+	"security.workspace.trust.enabled": false,
 	"terminal.integrated.smoothScrolling": true,
 	"git.openRepositoryInParentFolders": "always",
-	"security.workspace.trust.untrustedFiles": "open",
 	"dotnetAcquisitionExtension.enableTelemetry": false,
 	"files.exclude": {
 		"**/.git": true,

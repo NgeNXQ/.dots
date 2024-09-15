@@ -27,11 +27,6 @@
     display: none !important;
 }
 
-.tabs-container {
-    cursor: default !important;
-    -webkit-app-region: drag !important;
-}
-
 .dirty-diff-glyph {
     display: none !important;
 }
@@ -55,6 +50,10 @@
 
 .decorationsOverviewRuler {
     display: none !important;
+}
+
+.title.tabs.show-file-icons {
+    -webkit-app-region: drag !important;
 }
 
 .monaco-editor .line-numbers {

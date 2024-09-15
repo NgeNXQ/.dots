@@ -104,18 +104,22 @@
     },
     {
         "key": "shift+1",
-        "command": "workbench.action.splitEditorDown"
+        "command": "workbench.action.splitEditorDown",
+        "when": "editorTextFocus"
     },
     {
         "key": "shift+2",
-        "command": "workbench.action.splitEditorRight"
+        "command": "workbench.action.splitEditorRight",
+        "when": "editorTextFocus"
     },
     {
         "key": "shift+3",
-        "command": "workbench.action.splitEditorLeft"
+        "command": "workbench.action.splitEditorLeft",
+        "when": "editorTextFocus"
     },
     {
         "key": "shift+4",
-        "command": "workbench.action.splitEditorUp"
+        "command": "workbench.action.splitEditorUp",
+        "when": "editorTextFocus"
     }
 ]

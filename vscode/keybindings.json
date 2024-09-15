@@ -1,6 +1,11 @@
 // Place your key bindings in this file to override the defaults
 [
     {
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!editorTextFocus"
+    },
+    {
         "key": "alt+a",
         "command": "-editor.action.accessibilityHelpConfigureAssignedKeybindings",
         "when": "accessibilityHelpIsShown && accessibleViewHasAssignedKeybindings"
@@ -121,5 +126,5 @@
         "key": "shift+4",
         "command": "workbench.action.splitEditorUp",
         "when": "editorTextFocus"
-    }
+    },
 ]

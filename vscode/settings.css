@@ -48,16 +48,20 @@
     display: none !important;
 }
 
+.title.show-file-icons {
+    -webkit-app-region: drag !important;
+}
+
 .decorationsOverviewRuler {
     display: none !important;
 }
 
-.title.tabs.show-file-icons {
-    -webkit-app-region: drag !important;
-}
-
 .monaco-editor .line-numbers {
     left: 5px !important;
+}
+
+.quick-input-list-separator {
+    display: none !important;
 }
 
 .xterm-decoration-overview-ruler {
@@ -66,6 +70,10 @@
 
 .monaco-diff-editor .line-numbers {
     left: 10px !important;
+}
+
+.monaco-icon-description-container {
+    display: none !important;
 }
 
 .composite.title.has-composite-bar {

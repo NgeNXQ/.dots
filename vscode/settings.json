@@ -17,6 +17,7 @@
 	"workbench.tree.renderIndentGuides": "always",
 	"workbench.editor.editorActionsLocation": "hidden",
 	"editor.fontSize": 14,
+	"editor.codeLens": false,
 	"editor.glyphMargin": false,
 	"editor.fontLigatures": true,
 	"editor.indentSize": "tabSize",

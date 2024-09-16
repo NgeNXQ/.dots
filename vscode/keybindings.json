@@ -111,7 +111,7 @@
     },
     {
         "key": "alt+1",
-        "command": "workbench.action.splitEditorRight",
+        "command": "workbench.action.splitEditorToRightGroup",
         "when": "editorTextFocus"
     },
     {
@@ -120,7 +120,7 @@
     },
     {
         "key": "alt+2",
-        "command": "workbench.action.splitEditorDown",
+        "command": "workbench.action.splitEditorToBelowGroup",
         "when": "editorTextFocus"
     },
     {
@@ -129,7 +129,7 @@
     },
     {
         "key": "alt+3",
-        "command": "workbench.action.splitEditorLeft",
+        "command": "workbench.action.splitEditorToLeftGroup",
         "when": "editorTextFocus"
     },
     {
@@ -138,7 +138,7 @@
     },
     {
         "key": "alt+4",
-        "command": "workbench.action.splitEditorUp",
+        "command": "workbench.action.splitEditorToAboveGroup",
         "when": "editorTextFocus"
     },
     {

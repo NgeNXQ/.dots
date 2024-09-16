@@ -80,7 +80,7 @@ input::placeholder {
 	left: 10px !important;
 }
 
-.monaco-icon-description-container {
+.title.show-file-icons .monaco-icon-description-container {
 	display: none !important;
 }
 

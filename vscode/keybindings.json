@@ -106,40 +106,20 @@
         "command": "workbench.action.quickOpen"
     },
     {
-        "key": "ctrl+k ctrl+\\",
-        "command": "-workbench.action.splitEditorRight"
-    },
-    {
         "key": "alt+1",
-        "command": "workbench.action.splitEditorToRightGroup",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+k ctrl+\\",
-        "command": "-workbench.action.splitEditorDown"
+        "command": "workbench.action.moveEditorToRightGroup"
     },
     {
         "key": "alt+2",
-        "command": "workbench.action.splitEditorToBelowGroup",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+k ctrl+\\",
-        "command": "-workbench.action.splitEditorLeft"
+        "command": "workbench.action.moveEditorToBelowGroup"
     },
     {
         "key": "alt+3",
-        "command": "workbench.action.splitEditorToLeftGroup",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+k ctrl+\\",
-        "command": "-workbench.action.splitEditorUp"
+        "command": "workbench.action.moveEditorToLeftGroup"
     },
     {
         "key": "alt+4",
-        "command": "workbench.action.splitEditorToAboveGroup",
-        "when": "editorTextFocus"
+        "command": "workbench.action.moveEditorToBottomGroup"
     },
     {
         "key": "alt+1",

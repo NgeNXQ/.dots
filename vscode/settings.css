@@ -1,21 +1,6 @@
-.tab {
-	-webkit-app-region: no-drag !important;
-	border-radius: 5px 5px 0px 0px !important;
-}
-
-.slider {
-	display: none !important;
-}
-
-.message {
-	display: none !important;
-}
+/* Application */
 
 .shortcuts {
-	display: none !important;
-}
-
-.diffViewport {
 	display: none !important;
 }
 
@@ -27,53 +12,35 @@
 	display: none !important;
 }
 
-.dirty-diff-glyph {
-	display: none !important;
-}
-
-.includes-excludes {
-	display: none !important;
-}
-
-input::placeholder {
-	color: transparent !important;
-}
-
-.scrollbar.vertical {
-	display: none !important;
-}
-
-.quick-input-widget {
-	top: 35% !important;
-	outline: 1px solid var(--vscode-focusBorder, var(--vscode-input-border)) !important;
-}
-
-.scrollbar.horizonal {
-	display: none !important;
-}
-
 .title.show-file-icons {
 	-webkit-app-region: drag !important;
-}
-
-.decorationsOverviewRuler {
-	display: none !important;
-}
-
-.monaco-editor .line-numbers {
-	left: 5px !important;
-}
-
-.quick-input-list-separator {
-	display: none !important;
 }
 
 .editor-group-container.empty {
 	-webkit-app-region: drag !important;
 }
 
+/* Editor */
+
+.tab {
+	-webkit-app-region: no-drag !important;
+	border-radius: 5px 5px 0px 0px !important;
+}
+
+.dirty-diff-glyph {
+	display: none !important;
+}
+
+.decorationsOverviewRuler {
+	display: none !important;
+}
+
 .xterm-decoration-overview-ruler {
 	display: none !important;
+}
+
+.monaco-editor .line-numbers {
+	left: 5px !important;
 }
 
 .monaco-diff-editor .line-numbers {
@@ -83,6 +50,55 @@ input::placeholder {
 .title.show-file-icons .monaco-icon-description-container {
 	display: none !important;
 }
+
+/* Scroll bars */
+
+.slider {
+	display: none !important;
+}
+
+.scrollbar.vertical {
+	display: none !important;
+}
+
+.scrollbar.horizonal {
+	display: none !important;
+}
+
+/* Quick input */
+
+input::placeholder {
+	color: transparent !important;
+}
+
+.quick-input-widget {
+	top: 35% !important;
+	outline: 1px solid var(--vscode-focusBorder, var(--vscode-input-border)) !important;
+}
+
+.quick-input-list-separator {
+	display: none !important;
+}
+
+.quick-input-inline-action-bar {
+	display: none !important;
+}
+
+/* Views */
+
+.diffViewport {
+	display: none !important;
+}
+
+.message {
+	display: none !important;
+}
+
+.includes-excludes {
+	display: none !important;
+}
+
+/* Titles */
 
 .composite.title.has-composite-bar {
 	padding: 0px !important;

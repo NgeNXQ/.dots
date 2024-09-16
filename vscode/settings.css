@@ -64,6 +64,10 @@
     display: none !important;
 }
 
+.editor-group-container.empty {
+    -webkit-app-region: drag !important;
+}
+
 .xterm-decoration-overview-ruler {
     display: none !important;
 }

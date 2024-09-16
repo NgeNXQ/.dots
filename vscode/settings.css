@@ -47,10 +47,6 @@
 	left: 10px !important;
 }
 
-.title.show-file-icons .monaco-icon-description-container {
-	display: none !important;
-}
-
 /* Scroll bars */
 
 .slider {

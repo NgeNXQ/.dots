@@ -184,4 +184,102 @@
         "key": "ctrl+alt+down",
         "command": "workbench.action.decreaseViewHeight"
     },
+    {
+        "key": "pageup",
+        "command": "editor.action.insertCursorAbove"
+    },
+    {
+        "key": "pageup",
+        "command": "-notebook.cell.cursorPageUp",
+        "when": "editorTextFocus && inputFocus && notebookEditorFocused"
+    },
+    {
+        "key": "pageup",
+        "command": "-editor.action.pageUpHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "pageup",
+        "command": "-cursorPageUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "pageup",
+        "command": "-list.focusPageUp",
+        "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+    },
+    {
+        "key": "pageup",
+        "command": "-notifications.focusFirstToast",
+        "when": "notificationFocus && notificationToastsVisible"
+    },
+    {
+        "key": "pageup",
+        "command": "-quickInput.pagePrevious",
+        "when": "inQuickInput && quickInputType == 'quickPick'"
+    },
+    {
+        "key": "pageup",
+        "command": "-selectPrevPageSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+    },
+    {
+        "key": "pageup",
+        "command": "-workbench.action.interactivePlayground.pageUp",
+        "when": "interactivePlaygroundFocus && !editorTextFocus"
+    },
+    {
+        "key": "pageup",
+        "command": "-workbench.action.terminal.selectPrevPageSuggestion",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
+    },
+    {
+        "key": "pagedown",
+        "command": "editor.action.insertCursorBelow"
+    },
+    {
+        "key": "pagedown",
+        "command": "-notebook.cell.cursorPageDown",
+        "when": "editorTextFocus && inputFocus && notebookEditorFocused"
+    },
+    {
+        "key": "pagedown",
+        "command": "-editor.action.pageDownHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "pagedown",
+        "command": "-cursorPageDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "pagedown",
+        "command": "-list.focusPageDown",
+        "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+    },
+    {
+        "key": "pagedown",
+        "command": "-notifications.focusLastToast",
+        "when": "notificationFocus && notificationToastsVisible"
+    },
+    {
+        "key": "pagedown",
+        "command": "-quickInput.pageNext",
+        "when": "inQuickInput && quickInputType == 'quickPick'"
+    },
+    {
+        "key": "pagedown",
+        "command": "-selectNextPageSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+    },
+    {
+        "key": "pagedown",
+        "command": "-workbench.action.interactivePlayground.pageDown",
+        "when": "interactivePlaygroundFocus && !editorTextFocus"
+    },
+    {
+        "key": "pagedown",
+        "command": "-workbench.action.terminal.selectNextPageSuggestion",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
+    },
 ]

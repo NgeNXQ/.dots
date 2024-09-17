@@ -6,6 +6,36 @@
         "when": "!editorTextFocus"
     },
     {
+        "key": "ctrl+shift+q",
+        "command": "-workbench.action.quickOpenNavigatePreviousInViewPicker",
+        "when": "inQuickOpen && inViewsPicker"
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "workbench.action.closeEditorsAndGroup"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quickOpenView"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quickOpenNavigateNextInViewPicker",
+        "when": "inQuickOpen && inViewsPicker"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "f1",
+        "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "f1",
+        "command": "workbench.action.quickOpen"
+    },
+    {
         "key": "shift+alt+f",
         "command": "-notebook.formatCell",
         "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
@@ -36,18 +66,50 @@
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
     },
     {
+        "key": "shift+tab",
+        "command": "-acceptAlternativeSelectedSuggestion",
+        "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "shift+tab",
+        "command": "-insertPrevSuggestion",
+        "when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+    },
+    {
+        "key": "shift+tab",
+        "command": "-jumpToPrevSnippetPlaceholder",
+        "when": "hasPrevTabstop && inSnippetMode && textInputFocus"
+    },
+    {
+        "key": "shift+tab",
+        "command": "-outdent",
+        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+    },
+    {
+        "key": "shift+tab",
+        "command": "workbench.action.focusNextGroup"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.focusPreviousGroup"
+    },
+    {
         "key": "ctrl+t",
         "command": "-workbench.action.showAllSymbols"
     },
     {
-        "key": "ctrl+`",
-        "command": "-workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-    },
-    {
         "key": "ctrl+t",
         "command": "workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
     },
     {
         "key": "ctrl+0",
@@ -55,55 +117,12 @@
     },
     {
         "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
         "command": "workbench.action.focusSideBar"
-    },
-    {
-        "key": "f1",
-        "command": "-workbench.action.showCommands"
-    },
-    {
-        "key": "ctrl+e",
-        "command": "workbench.action.showCommands"
-    },
-    {
-        "key": "f1",
-        "command": "workbench.action.quickOpenView"
-    },
-    {
-        "key": "ctrl+q",
-        "command": "-workbench.action.quickOpenView"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "-workbench.action.terminal.killEditor",
-        "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "ctrl+q",
-        "command": "workbench.action.terminal.killEditor",
-        "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "-workbench.action.closeActiveEditor"
-    },
-    {
-        "key": "ctrl+q",
-        "command": "workbench.action.closeActiveEditor"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "-workbench.action.closeGroup",
-        "when": "activeEditorGroupEmpty && multipleEditorGroups"
-    },
-    {
-        "key": "ctrl+q",
-        "command": "workbench.action.closeGroup",
-        "when": "activeEditorGroupEmpty && multipleEditorGroups"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "workbench.action.quickOpen"
     },
     {
         "key": "alt+1",
@@ -122,39 +141,47 @@
         "command": "workbench.action.moveEditorToBottomGroup"
     },
     {
-        "key": "alt+1",
-        "command": "-workbench.action.openEditorAtIndex1"
+        "key": "ctrl+alt+right",
+        "command": "-workbench.action.moveEditorToNextGroup"
     },
     {
-        "key": "alt+2",
-        "command": "-workbench.action.openEditorAtIndex2"
+        "key": "ctrl+alt+right",
+        "command": "workbench.action.increaseViewWidth"
     },
     {
-        "key": "alt+3",
-        "command": "-workbench.action.openEditorAtIndex3"
+        "key": "ctrl+alt+left",
+        "command": "-workbench.action.moveEditorToPreviousGroup"
     },
     {
-        "key": "alt+4",
-        "command": "-workbench.action.openEditorAtIndex4"
+        "key": "ctrl+alt+left",
+        "command": "workbench.action.decreaseViewWidth"
     },
     {
-        "key": "alt+5",
-        "command": "-workbench.action.openEditorAtIndex5"
+        "key": "ctrl+alt+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
     },
     {
-        "key": "alt+6",
-        "command": "-workbench.action.openEditorAtIndex6"
+        "key": "ctrl+alt+up",
+        "command": "-quickInput.previousSeparator",
+        "when": "inQuickInput && quickInputType == 'quickPick'"
     },
     {
-        "key": "alt+7",
-        "command": "-workbench.action.openEditorAtIndex7"
+        "key": "ctrl+alt+up",
+        "command": "workbench.action.increaseViewHeight"
     },
     {
-        "key": "alt+8",
-        "command": "-workbench.action.openEditorAtIndex8"
+        "key": "ctrl+alt+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
     },
     {
-        "key": "alt+9",
-        "command": "-workbench.action.openEditorAtIndex9"
+        "key": "ctrl+alt+down",
+        "command": "-quickInput.nextSeparator",
+        "when": "inQuickInput && quickInputType == 'quickPick'"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "workbench.action.decreaseViewHeight"
     },
 ]

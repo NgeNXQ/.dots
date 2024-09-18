@@ -6,13 +6,17 @@
         "when": "!editorTextFocus"
     },
     {
-        "key": "ctrl+shift+q",
-        "command": "-workbench.action.quickOpenNavigatePreviousInViewPicker",
-        "when": "inQuickOpen && inViewsPicker"
+        "key": "f1",
+        "command": "workbench.action.quickOpen"
     },
     {
-        "key": "ctrl+shift+q",
-        "command": "workbench.action.closeEditorsAndGroup"
+        "key": "f1",
+        "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+q",
@@ -24,21 +28,14 @@
         "when": "inQuickOpen && inViewsPicker"
     },
     {
-        "key": "ctrl+q",
-        "command": "workbench.action.closeActiveEditor"
+        "key": "ctrl+shift+q",
+        "command": "workbench.action.closeEditorsAndGroup",
+        "when": "editorFocus"
     },
     {
-        "key": "f1",
-        "command": "-workbench.action.showCommands"
-    },
-    {
-        "key": "f1",
-        "command": "workbench.action.quickOpen"
-    },
-    {
-        "key": "shift+alt+f",
-        "command": "-notebook.formatCell",
-        "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+        "key": "ctrl+shift+q",
+        "command": "-workbench.action.quickOpenNavigatePreviousInViewPicker",
+        "when": "inQuickOpen && inViewsPicker"
     },
     {
         "key": "alt+a",
@@ -47,8 +44,8 @@
     },
     {
         "key": "shift+alt+f",
-        "command": "-editor.action.formatDocument",
-        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+        "command": "-notebook.formatCell",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
     },
     {
         "key": "alt+a",
@@ -57,13 +54,22 @@
     },
     {
         "key": "shift+alt+f",
-        "command": "-editor.action.formatDocument.none",
-        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+        "command": "-editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
     },
     {
         "key": "alt+a",
         "command": "editor.action.formatDocument.none",
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "shift+tab",
+        "command": "workbench.action.focusNextGroup"
     },
     {
         "key": "shift+tab",
@@ -86,8 +92,8 @@
         "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
     },
     {
-        "key": "shift+tab",
-        "command": "workbench.action.focusNextGroup"
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.focusPreviousGroup"
     },
     {
         "key": "ctrl+shift+tab",
@@ -100,20 +106,16 @@
         "when": "inEditorsPicker && inQuickOpen"
     },
     {
-        "key": "ctrl+shift+tab",
-        "command": "workbench.action.focusPreviousGroup"
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.toggleTerminal",
     },
     {
         "key": "ctrl+t",
         "command": "-workbench.action.showAllSymbols"
     },
     {
-        "key": "ctrl+t",
-        "command": "workbench.action.terminal.toggleTerminal",
-    },
-    {
-        "key": "ctrl+0",
-        "command": "-workbench.action.focusSideBar"
+        "key": "ctrl+`",
+        "command": "workbench.action.focusSideBar"
     },
     {
         "key": "ctrl+`",
@@ -121,24 +123,29 @@
         "when": "terminal.active"
     },
     {
-        "key": "ctrl+`",
-        "command": "workbench.action.focusSideBar"
-    },
-    {
         "key": "alt+1",
-        "command": "workbench.action.moveEditorToRightGroup"
+        "command": "workbench.action.moveEditorToRightGroup",
+        "when": "editorFocus"
     },
     {
         "key": "alt+2",
-        "command": "workbench.action.moveEditorToBelowGroup"
+        "command": "workbench.action.moveEditorToBelowGroup",
+        "when": "editorFocus"
     },
     {
         "key": "alt+3",
-        "command": "workbench.action.moveEditorToLeftGroup"
+        "command": "workbench.action.moveEditorToLeftGroup",
+        "when": "editorFocus"
     },
     {
         "key": "alt+4",
-        "command": "workbench.action.moveEditorToAboveGroup"
+        "command": "workbench.action.moveEditorToAboveGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "workbench.action.increaseViewWidth",
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+alt+right",
@@ -146,15 +153,22 @@
     },
     {
         "key": "ctrl+alt+right",
-        "command": "workbench.action.increaseViewWidth"
+        "command": "-quickInput.acceptInBackground",
+        "when": "cursorAtEndOfQuickInputBox && inQuickInput && quickInputType == 'quickPick' || inQuickInput && !inputFocus && quickInputType == 'quickPick'"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "workbench.action.decreaseViewWidth",
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+alt+left",
         "command": "-workbench.action.moveEditorToPreviousGroup"
     },
     {
-        "key": "ctrl+alt+left",
-        "command": "workbench.action.decreaseViewWidth"
+        "key": "ctrl+alt+up",
+        "command": "workbench.action.increaseViewHeight",
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+alt+up",
@@ -167,8 +181,9 @@
         "when": "inQuickInput && quickInputType == 'quickPick'"
     },
     {
-        "key": "ctrl+alt+up",
-        "command": "workbench.action.increaseViewHeight"
+        "key": "ctrl+alt+down",
+        "command": "workbench.action.decreaseViewHeight",
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+alt+down",
@@ -181,12 +196,9 @@
         "when": "inQuickInput && quickInputType == 'quickPick'"
     },
     {
-        "key": "ctrl+alt+down",
-        "command": "workbench.action.decreaseViewHeight"
-    },
-    {
         "key": "pageup",
-        "command": "editor.action.insertCursorAbove"
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
     },
     {
         "key": "pageup",
@@ -235,7 +247,8 @@
     },
     {
         "key": "pagedown",
-        "command": "editor.action.insertCursorBelow"
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
     },
     {
         "key": "pagedown",
@@ -281,5 +294,63 @@
         "key": "pagedown",
         "command": "-workbench.action.terminal.selectNextPageSuggestion",
         "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.terminal.killEditor",
+        "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeGroup",
+        "when": "activeEditorGroupEmpty && multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "notebook.addFindMatchToSelection",
+        "when": "config.notebook.multiSelect.enabled && notebookCellEditorFocused && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-notebook.addFindMatchToSelection",
+        "when": "config.notebook.multiSelect.enabled && notebookCellEditorFocused && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "workbench.action.increaseViewSize",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "workbench.action.decreaseViewSize",
+        "when": "explorerViewletFocus"
     },
 ]

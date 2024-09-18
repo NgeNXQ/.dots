@@ -353,4 +353,9 @@
         "command": "workbench.action.decreaseViewSize",
         "when": "explorerViewletFocus"
     },
+    {
+        "key": "ctrl+alt+space",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+    },
 ]

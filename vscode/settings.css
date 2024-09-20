@@ -1,122 +1,126 @@
 /* Application */
 
 .shortcuts {
-	display: none !important;
+    display: none !important;
 }
 
 .window-title {
-	display: none !important;
+    display: none !important;
 }
 
 .window-appicon {
-	display: none !important;
+    display: none !important;
 }
 
 .title.show-file-icons {
-	-webkit-app-region: drag !important;
+    -webkit-app-region: drag !important;
 }
 
 .editor-group-container.empty {
-	-webkit-app-region: drag !important;
+    -webkit-app-region: drag !important;
 }
 
 /* Editor */
 
 .tab {
-	-webkit-app-region: no-drag !important;
-	border-radius: 5px 5px 0px 0px !important;
+    -webkit-app-region: no-drag !important;
+    border-radius: 5px 5px 0px 0px !important;
 }
 
 .dirty-diff-glyph {
-	display: none !important;
+    display: none !important;
 }
 
 .decorationsOverviewRuler {
-	display: none !important;
+    display: none !important;
 }
 
 .xterm-decoration-overview-ruler {
-	display: none !important;
+    display: none !important;
 }
 
 .monaco-editor .line-numbers {
-	left: 5px !important;
+    left: 5px !important;
 }
 
 .monaco-diff-editor .line-numbers {
-	left: 10px !important;
+    left: 10px !important;
 }
 
 /* Scroll bars */
 
 .slider {
-	display: none !important;
+    display: none !important;
 }
 
 .scrollbar.vertical {
-	display: none !important;
+    display: none !important;
 }
 
 .scrollbar.horizonal {
-	display: none !important;
+    display: none !important;
 }
 
 /* Quick input */
 
 input::placeholder {
-	color: transparent !important;
+    color: transparent !important;
 }
 
 .quick-input-widget {
-	top: 35% !important;
-	outline: 1px solid var(--vscode-focusBorder, var(--vscode-input-border)) !important;
+    top: 35% !important;
+    outline: 1px solid var(--vscode-focusBorder, var(--vscode-input-border)) !important;
 }
 
 .quick-input-list-separator {
-	display: none !important;
+    display: none !important;
 }
 
 .quick-input-inline-action-bar {
-	display: none !important;
+    display: none !important;
 }
 
 /* Views */
 
-.diffViewport {
-	display: none !important;
+.message {
+    display: none !important;
 }
 
-.message {
-	display: none !important;
+.diffViewport {
+    display: none !important;
+}
+
+.global-actions {
+    display: none !important;
 }
 
 .includes-excludes {
-	display: none !important;
+    display: none !important;
 }
 
 /* Titles */
 
 .composite.title.has-composite-bar {
-	padding: 0px !important;
+    padding: 0px !important;
 }
 
 .composite.title:not(.has-composite-bar) {
-	-webkit-app-region: drag !important;
+    -webkit-app-region: drag !important;
 }
 
 [id^="workbench.parts"] .composite.title:not(.has-composite-bar)>* {
-	display: none !important;
+    display: none !important;
 }
 
 [id^="workbench.parts"]:has(.content .explorer-viewlet) .composite.title>*:first-child {
-	display: block !important;
+    display: block !important;
 }
 
 [id^="workbench.parts"]:has(.content .explorer-viewlet) .composite.title:first-child h2 {
-	text-transform: none !important;
-	transform: translateY(5%) !important;
+    text-transform: none !important;
+    transform: translateY(5%) !important;
 }
 
 [id^="workbench.parts"]:has(.content .explorer-viewlet) .composite.title>*:not(:first-child) {
-	display: none !important;
+    display: none !important;
 }

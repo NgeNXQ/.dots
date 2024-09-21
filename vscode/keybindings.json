@@ -451,4 +451,12 @@
         "command": "-workbench.debug.action.toggleRepl",
         "when": "workbench.panel.repl.view.active"
     },
+    {
+        "key": "ctrl+m",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "-editor.action.toggleTabFocusMode"
+    },
 ]

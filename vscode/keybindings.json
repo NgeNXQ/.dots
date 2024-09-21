@@ -453,10 +453,15 @@
     },
     {
         "key": "ctrl+m",
-        "command": "workbench.action.toggleMaximizedPanel"
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "panelFocus"
     },
     {
         "key": "ctrl+m",
         "command": "-editor.action.toggleTabFocusMode"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "-workbench.action.openSettings"
     },
 ]

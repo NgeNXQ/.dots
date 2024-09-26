@@ -51,6 +51,21 @@
     left: 10px !important;
 }
 
+/* Status bar */
+
+.last-visible-item {
+    margin-right: 0 !important;
+}
+
+.first-visible-item {
+    padding-left: 0 !important;
+}
+
+.statusbar-item-label {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
 /* Scroll bars */
 
 .slider {
@@ -82,6 +97,17 @@ input::placeholder {
 
 .quick-input-inline-action-bar {
     display: none !important;
+}
+
+.quick-input-list .monaco-list {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    border-radius: 6px !important;
+}
+
+.quick-input-widget.hidden-input .quick-input-list {
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 /* Views */

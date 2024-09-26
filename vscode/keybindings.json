@@ -1,4 +1,3 @@
-// Place your key bindings in this file to override the defaults
 [
     {
         "key": "escape",
@@ -454,7 +453,6 @@
     {
         "key": "ctrl+m",
         "command": "workbench.action.toggleMaximizedPanel",
-        "when": "panelFocus"
     },
     {
         "key": "ctrl+m",
@@ -463,5 +461,99 @@
     {
         "key": "ctrl+,",
         "command": "-workbench.action.openSettings"
+    },
+    {
+        "key": "ctrl+\\",
+        "command": "editor.action.jumpToBracket",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+\\",
+        "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "ctrl+shift+\\",
+        "command": "editor.action.selectToBracket"
+    },
+    {
+        "key": "ctrl+shift+\\",
+        "command": "-workbench.action.terminal.focusTabs",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "ctrl+shift+\\",
+        "command": "-editor.action.jumpToBracket",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.togglePanel",
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-python.refreshTensorBoard",
+        "when": "python.hasActiveTensorBoardSession"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.terminal.runRecentCommand",
+        "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported || accessibilityModeEnabled && accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewIsShown && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-inlineChat.regenerate",
+        "when": "inlineChatHasProvider && inlineChatVisible"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+        "when": "inQuickOpen && inRecentFilesPicker"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "-workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-editor.action.toggleScreenReaderAccessibilityMode",
+        "when": "accessibilityHelpIsShown"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
     },
 ]

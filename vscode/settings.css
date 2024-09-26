@@ -20,6 +20,10 @@
     -webkit-app-region: drag !important;
 }
 
+.editor-widget .monaco-sash.vertical {
+    display: none !important;
+}
+
 /* Editor */
 
 .tab {
@@ -96,6 +100,10 @@ input::placeholder {
 
 .includes-excludes {
     display: none !important;
+}
+
+.extensions-search-container {
+    transform: translateX(-3px) !important;
 }
 
 /* Titles */

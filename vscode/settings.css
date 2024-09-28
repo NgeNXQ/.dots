@@ -20,6 +20,10 @@
     -webkit-app-region: drag !important;
 }
 
+.monaco-sash.horizontal.maximum {
+    display: none !important;
+}
+
 .editor-widget .monaco-sash.vertical {
     display: none !important;
 }
@@ -66,6 +70,14 @@
     margin-right: 0 !important;
 }
 
+#status\.problems {
+    order: 1;
+}
+
+#status\.scm\.0 {
+    order: 2;
+}
+
 /* Scroll bars */
 
 .slider {
@@ -96,6 +108,10 @@ input::placeholder {
 }
 
 .quick-input-inline-action-bar {
+    display: none !important;
+}
+
+.quick-input-progress:not(.active) {
     display: none !important;
 }
 

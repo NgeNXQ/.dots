@@ -353,11 +353,6 @@
         "when": "explorerViewletFocus"
     },
     {
-        "key": "ctrl+alt+space",
-        "command": "editor.action.showHover",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "ctrl+shift+w",
         "command": "-workbench.action.closeWindow"
     },
@@ -645,5 +640,14 @@
         "key": "ctrl+shift+]",
         "command": "-notebook.unfold",
         "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+        "key": "insert",
+        "command": "editor.debug.action.selectionToWatch"
+    },
+    {
+        "key": "ctrl+alt+space",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
     },
 ]

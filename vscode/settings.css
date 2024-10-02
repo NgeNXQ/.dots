@@ -98,8 +98,15 @@ input::placeholder {
     color: transparent !important;
 }
 
+.quick-input-header {
+    padding: 5px 5px 0px 5px !important;
+}
+
 .quick-input-widget {
     top: 35% !important;
+}
+
+.quick-input-widget:not(.hidden-input) {
     outline: 1px solid var(--vscode-focusBorder, var(--vscode-input-border)) !important;
 }
 
@@ -115,15 +122,23 @@ input::placeholder {
     display: none !important;
 }
 
-.quick-input-list .monaco-list {
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-    border-radius: 6px !important;
+.quick-input-list-entry-action-bar {
+    display: none !important;
 }
 
-.quick-input-widget.hidden-input .quick-input-list {
+.quick-input-widget .quick-input-list {
     margin-top: 0 !important;
     padding-bottom: 0 !important;
+}
+
+.quick-input-widget .quick-input-list .monaco-list {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.quick-input-widget.hidden-input .quick-input-list .monaco-list {
+    border-radius: 6px !important;
+    outline: 1px solid var(--vscode-focusBorder, var(--vscode-input-border)) !important;
 }
 
 /* Views */

@@ -98,16 +98,21 @@ input::placeholder {
     color: transparent !important;
 }
 
-.quick-input-header {
-    padding: 5px 5px 0px 5px !important;
-}
-
 .quick-input-widget {
     top: 35% !important;
+    outline: 1px solid var(--vscode-focusBorder, var(--vscode-input-border)) !important;
 }
 
-.quick-input-widget:not(.hidden-input) {
-    outline: 1px solid var(--vscode-focusBorder, var(--vscode-input-border)) !important;
+.quick-input-header {
+    padding: 5px !important;
+}
+
+.quick-input-message {
+    padding: 5px 5px 0 5px !important;
+}
+
+.quick-input-titlebar {
+    display: none !important;
 }
 
 .quick-input-list-separator {
@@ -126,19 +131,22 @@ input::placeholder {
     display: none !important;
 }
 
-.quick-input-widget .quick-input-list {
+.quick-input-widget.hidden-input .quick-input-list {
     margin-top: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-.quick-input-widget .quick-input-list .monaco-list {
     padding-top: 5px !important;
     padding-bottom: 5px !important;
 }
 
+.quick-input-widget.hidden-input .quick-input-header {
+    display: none !important;
+}
+
 .quick-input-widget.hidden-input .quick-input-list .monaco-list {
-    border-radius: 6px !important;
-    outline: 1px solid var(--vscode-focusBorder, var(--vscode-input-border)) !important;
+    padding-bottom: 0 !important;
+}
+
+.quick-input-widget:not(.hidden-input) .quick-input-list:not(:has(.monaco-list-row))>* {
+    padding-bottom: 0 !important;
 }
 
 /* Views */
@@ -164,10 +172,6 @@ input::placeholder {
 }
 
 /* Titles */
-
-.composite.title.has-composite-bar {
-    padding: 0px !important;
-}
 
 .composite.title:not(.has-composite-bar) {
     -webkit-app-region: drag !important;

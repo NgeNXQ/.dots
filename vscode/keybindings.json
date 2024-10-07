@@ -14,11 +14,6 @@
     },
     {
         "key": "ctrl+q",
-        "command": "workbench.action.closeActiveEditor",
-        "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+q",
         "command": "-workbench.action.quickOpenView"
     },
     {
@@ -27,14 +22,21 @@
         "when": "inQuickOpen && inViewsPicker"
     },
     {
-        "key": "ctrl+shift+q",
-        "command": "workbench.action.closeEditorsAndGroup",
-        "when": "editorFocus"
+        "key": "ctrl+q",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+f4",
+        "command": "-workbench.action.closeActiveEditor"
     },
     {
         "key": "ctrl+shift+q",
         "command": "-workbench.action.quickOpenNavigatePreviousInViewPicker",
         "when": "inQuickOpen && inViewsPicker"
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "workbench.action.closeEditorsAndGroup"
     },
     {
         "key": "alt+a",
@@ -649,5 +651,35 @@
         "key": "ctrl+alt+space",
         "command": "editor.action.showHover",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+l",
+        "command": "expandLineSelection",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "go-to-relative.goToLine"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-go-to-relative.goToLine"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "go-to-relative.goToLineNegative"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-go-to-relative.goToLineNegative"
     },
 ]

@@ -108,7 +108,7 @@
     },
     {
         "key": "ctrl+t",
-        "command": "workbench.action.terminal.toggleTerminal",
+        "command": "workbench.action.createTerminalEditor"
     },
     {
         "key": "ctrl+t",
@@ -126,27 +126,27 @@
     {
         "key": "alt+1",
         "command": "workbench.action.moveEditorToRightGroup",
-        "when": "editorFocus"
+        "when": "editorFocus || terminalEditorFocus"
     },
     {
         "key": "alt+2",
         "command": "workbench.action.moveEditorToBelowGroup",
-        "when": "editorFocus"
+        "when": "editorFocus || terminalEditorFocus"
     },
     {
         "key": "alt+3",
         "command": "workbench.action.moveEditorToLeftGroup",
-        "when": "editorFocus"
+        "when": "editorFocus || terminalEditorFocus"
     },
     {
         "key": "alt+4",
         "command": "workbench.action.moveEditorToAboveGroup",
-        "when": "editorFocus"
+        "when": "editorFocus || terminalEditorFocus"
     },
     {
         "key": "ctrl+alt+right",
         "command": "workbench.action.increaseViewWidth",
-        "when": "editorFocus"
+        "when": "editorFocus || || terminalEditorFocus"
     },
     {
         "key": "ctrl+alt+right",
@@ -160,7 +160,7 @@
     {
         "key": "ctrl+alt+left",
         "command": "workbench.action.decreaseViewWidth",
-        "when": "editorFocus"
+        "when": "editorFocus || terminalEditorFocus"
     },
     {
         "key": "ctrl+alt+left",
@@ -169,7 +169,7 @@
     {
         "key": "ctrl+alt+up",
         "command": "workbench.action.increaseViewHeight",
-        "when": "editorFocus"
+        "when": "editorFocus || terminalEditorFocus"
     },
     {
         "key": "ctrl+alt+up",
@@ -184,7 +184,7 @@
     {
         "key": "ctrl+alt+down",
         "command": "workbench.action.decreaseViewHeight",
-        "when": "editorFocus"
+        "when": "editorFocus || terminalEditorFocus"
     },
     {
         "key": "ctrl+alt+down",
@@ -448,12 +448,37 @@
         "when": "workbench.panel.repl.view.active"
     },
     {
+        "key": "ctrl+g",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.terminal.goToRecentDirectory",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
         "key": "ctrl+m",
         "command": "workbench.action.toggleMaximizedPanel",
     },
     {
         "key": "ctrl+m",
         "command": "-editor.action.toggleTabFocusMode"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "workbench.action.toggleMaximizeEditorGroup",
+        "when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
+    },
+    {
+        "key": "ctrl+k ctrl+m",
+        "command": "-workbench.action.toggleMaximizeEditorGroup",
+        "when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
     },
     {
         "key": "ctrl+,",
@@ -644,10 +669,6 @@
         "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'"
     },
     {
-        "key": "insert",
-        "command": "editor.debug.action.selectionToWatch"
-    },
-    {
         "key": "ctrl+alt+space",
         "command": "editor.action.showHover",
         "when": "editorTextFocus"
@@ -681,5 +702,88 @@
     {
         "key": "ctrl+shift+g",
         "command": "-go-to-relative.goToLineNegative"
+    },
+    {
+        "key": "ctrl+9",
+        "command": "workbench.action.focusLastEditorGroup"
+    },
+    {
+        "key": "ctrl+9",
+        "command": "-workbench.action.lastEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+.",
+        "command": "-breadcrumbs.focusAndSelect",
+        "when": "breadcrumbsPossible && breadcrumbsVisible"
+    },
+    {
+        "key": "ctrl+shift+;",
+        "command": "-breadcrumbs.focus",
+        "when": "breadcrumbsPossible && breadcrumbsVisible"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "-breadcrumbs.focusNext",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "right",
+        "command": "-breadcrumbs.focusNext",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "-breadcrumbs.focusNextWithPicker",
+        "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus && !treestickyScrollFocused"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "-breadcrumbs.focusPrevious",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "left",
+        "command": "-breadcrumbs.focusPrevious",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "-breadcrumbs.focusPreviousWithPicker",
+        "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus && !treestickyScrollFocused"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-breadcrumbs.revealFocused",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "space",
+        "command": "-breadcrumbs.revealFocused",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-breadcrumbs.revealFocusedFromTreeAside",
+        "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus && !treestickyScrollFocused"
+    },
+    {
+        "key": "escape",
+        "command": "-breadcrumbs.selectEditor",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "down",
+        "command": "-breadcrumbs.selectFocused",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "enter",
+        "command": "-breadcrumbs.selectFocused",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "ctrl+shift+.",
+        "command": "-breadcrumbs.toggleToOn",
+        "when": "!config.breadcrumbs.enabled"
     },
 ]

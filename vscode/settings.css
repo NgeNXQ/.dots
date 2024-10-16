@@ -1,5 +1,9 @@
 /* Application */
 
+* {
+    font-family: 'JetBrainsMono Nerd Font', monospace !important;
+}
+
 .shortcuts {
     display: none !important;
 }
@@ -33,6 +37,10 @@
 .tab {
     -webkit-app-region: no-drag !important;
     border-radius: 5px 5px 0px 0px !important;
+}
+
+.squiggly-hint {
+    display: none !important;
 }
 
 .dirty-diff-glyph {
@@ -70,12 +78,12 @@
     margin-right: 0 !important;
 }
 
-#status\.problems {
-    order: 1;
-}
-
 #status\.scm\.0 {
     order: 2;
+}
+
+#status\.problems {
+    order: 1;
 }
 
 /* Scroll bars */
@@ -88,7 +96,7 @@
     display: none !important;
 }
 
-.scrollbar.horizonal {
+.scrollbar.horizontal {
     display: none !important;
 }
 
@@ -172,6 +180,18 @@ input::placeholder {
 }
 
 /* Titles */
+
+/* Bottom view */
+
+.composite.title.has-composite-bar .actions-container {
+    justify-content: flex-start !important;
+}
+
+.composite.title.has-composite-bar .composite-bar-container {
+    display: none !important;
+}
+
+/* Explorer sidebar */
 
 .composite.title:not(.has-composite-bar) {
     -webkit-app-region: drag !important;

@@ -1,36 +1,46 @@
-function getWindowTitleText() {
-    const windowTitle = document.querySelector('.window-title');
-    return windowTitle ? windowTitle.textContent.trim() : '';
-}
+// workbench.parts.sidebar
+// workbench.parts.titlebar
+// workbench.parts.auxiliarybar
 
-function setExplorerTitleLabel(titleText) {
-    const paneCompositeParts = document.querySelectorAll('.pane-composite-part');
+let windowTitle;
+let workbenchPartBar;
 
-    paneCompositeParts.forEach(paneCompositePart => {
-        const explorerViewlet = paneCompositePart.querySelector('.composite.viewlet.explorer-viewlet');
+function getElementByIdWithInterval(elementId, pollingInterval = 10) {
+    return new Promise((resolve) => {
+        const intervalId = setInterval(() => {
+            const cachedElement = document.getElementById(elementId);
 
-        if (explorerViewlet) {
-            const titleLabel = paneCompositePart.querySelector('.composite.title .title-label h2');
-
-            if (titleLabel) {
-                titleLabel.textContent = titleText;
+            if (cachedElement) {
+                clearInterval(intervalId);
+                resolve(cachedElement);
             }
-        }
+        }, pollingInterval);
     });
 }
 
 function updateExplorerTitleLabel() {
-    const titleText = getWindowTitleText();
-
-    if (titleText) {
-        setExplorerTitleLabel(titleText);
-    }
+    const explorerTitleLabel = workbenchPartBar.querySelector('.composite.title .title-label h2');
+    explorerTitleLabel.textContent = windowTitle.textContent.trim();
 }
 
-document.addEventListener('DOMContentLoaded', updateExplorerTitleLabel);
+document.addEventListener('DOMContentLoaded', () => {
+    getElementByIdWithInterval('workbench.parts.titlebar').then(element => {
+        windowTitle = element;
 
-const observer = new MutationObserver(() => {
-    updateExplorerTitleLabel();
+        const observerTitleBar = new MutationObserver(() => {
+            updateExplorerTitleLabel();
+        });
+
+        observerTitleBar.observe(element, { childList: true, subtree: true });
+    });
+
+    getElementByIdWithInterval('workbench.parts.sidebar').then(element => {
+        workbenchPartBar = element;
+
+        const observerTitleBar = new MutationObserver(() => {
+            updateExplorerTitleLabel();
+        });
+
+        observerTitleBar.observe(element, { childList: true, subtree: true });
+    });
 });
-
-observer.observe(document.body, { childList: true, subtree: true });

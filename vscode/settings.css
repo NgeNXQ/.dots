@@ -63,6 +63,10 @@
     left: 10px !important;
 }
 
+.editor-group-container-toolbar .action-item {
+    display: none !important;
+}
+
 /* Widgets */
 
 .zone-widget {
@@ -71,6 +75,10 @@
 
 .monaco-hover-content {
     padding: 0 !important;
+}
+
+.zone-widget .action-item {
+    display: none !important;
 }
 
 .zone-widget-container .peekview-title {
@@ -85,7 +93,7 @@
     width: auto !important;
     height: auto !important;
     max-width: 430px !important;
-    word-wrap: normal !important;
+    overflow-wrap: anywhere !important;
 }
 
 .suggest-widget {
@@ -259,6 +267,14 @@ input::placeholder {
 
 .extensions-search-container {
     transform: translateX(-3px) !important;
+}
+
+.explorer-viewlet .show-file-icons .monaco-tl-twistie.collapsible.collapsed+.monaco-tl-contents .folder-icon::before {
+    background-image: url(vscode-file://vscode-app/c:/Users/NgenX/.vscode/extensions/jonathanharty.gruvbox-material-icon-theme-1.1.5/icons/folder.svg) !important;
+}
+
+.explorer-viewlet .show-file-icons .monaco-tl-twistie.collapsible:not(.collapsed)+.monaco-tl-contents .folder-icon::before {
+    background-image: url(vscode-file://vscode-app/c:/Users/NgenX/.vscode/extensions/jonathanharty.gruvbox-material-icon-theme-1.1.5/icons/folder-open.svg) !important;
 }
 
 /* Titles */

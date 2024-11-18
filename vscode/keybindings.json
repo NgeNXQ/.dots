@@ -177,6 +177,10 @@
     },
     {
         "key": "ctrl+alt+up",
+        "command": "workbench.action.increaseViewSize"
+    },
+    {
+        "key": "ctrl+alt+up",
         "command": "-editor.action.insertCursorAbove",
         "when": "editorTextFocus"
     },
@@ -189,6 +193,10 @@
         "key": "ctrl+alt+down",
         "command": "workbench.action.decreaseViewHeight",
         "when": "editorFocus || terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "workbench.action.decreaseViewSize"
     },
     {
         "key": "ctrl+alt+down",
@@ -346,16 +354,6 @@
     {
         "key": "ctrl+d",
         "command": "explorer.newFolder",
-        "when": "explorerViewletFocus"
-    },
-    {
-        "key": "ctrl+alt+left",
-        "command": "workbench.action.increaseViewSize",
-        "when": "explorerViewletFocus"
-    },
-    {
-        "key": "ctrl+alt+right",
-        "command": "workbench.action.decreaseViewSize",
         "when": "explorerViewletFocus"
     },
     {
@@ -1057,5 +1055,83 @@
         "key": "up",
         "command": "-showPrevParameterHint",
         "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u0003"
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "insert",
+        "command": "editor.debug.action.selectionToWatch"
+    },
+    {
+        "key": "alt+w",
+        "command": "workbench.debug.action.focusWatchView"
+    },
+    {
+        "key": "alt+w",
+        "command": "-toggleSearchEditorWholeWord",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "-workbench.action.terminal.toggleFindWholeWord",
+        "when": "terminalFindVisible && terminalHasBeenCreated || terminalFindVisible && terminalProcessSupported"
+    },
+    {
+        "key": "alt+w",
+        "command": "-toggleFindWholeWord",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "-toggleSearchWholeWord",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "alt+v",
+        "command": "workbench.debug.action.focusVariablesView"
+    },
+    {
+        "key": "alt+c",
+        "command": "workbench.debug.action.focusCallStackView"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleSearchEditorCaseSensitive",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFindVisible && terminalHasBeenCreated || terminalFindVisible && terminalProcessSupported"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleFindCaseSensitive",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleSearchCaseSensitive",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "alt+f5",
+        "command": "workbench.action.tasks.runTask"
+    },
+    {
+        "key": "alt+f5",
+        "command": "-workbench.action.compareEditor.nextChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "alt+f5",
+        "command": "-workbench.action.editor.nextChange",
+        "when": "editorTextFocus && !textCompareEditorActive"
     },
 ]

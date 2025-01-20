@@ -35,6 +35,10 @@
     border-radius: 5px 5px 0px 0px !important;
 }
 
+.monaco-sash {
+    display: none !important;
+}
+
 .squiggly-hint {
     display: none !important;
 }
@@ -67,6 +71,10 @@
     display: none !important;
 }
 
+.title.show-file-icons .monaco-icon-label.file-icon {
+    padding-left: 35px !important;
+}
+
 /* Widgets */
 
 .zone-widget {
@@ -75,6 +83,23 @@
 
 .monaco-hover-content {
     padding: 0 !important;
+}
+
+.debug-hover-widget .complex-value {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.rename-input {
+    width: 100% !important;
+}
+
+.rename-box .rename-label {
+    display: none !important;
+}
+
+.monaco-hover-content .actions {
+    display: none !important;
 }
 
 .zone-widget .action-item {
@@ -89,11 +114,25 @@
     display: none !important;
 }
 
+.monaco-hover .marker.hover-contents {
+    padding: 4px 5px !important;
+}
+
+.monaco-hover .hover-contents.code-hover-contents {
+    padding: 4px 5px !important;
+}
+
 .parameter-hints-widget {
     width: auto !important;
     height: auto !important;
     max-width: 430px !important;
     overflow-wrap: anywhere !important;
+}
+
+.parameter-hints-widget .body {
+    overflow-y: scroll !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--vscode-sash-hoverBorder) transparent !important;
 }
 
 .suggest-widget {
@@ -108,13 +147,14 @@
 .suggest-details-container {
     width: auto !important;
     height: auto !important;
+    min-width: 430px !important;
     max-width: 430px !important;
     max-height: 230px !important;
 }
 
 .suggest-details-container {
-    top: var(--suggest-details-top) !important;
-    left: var(--suggest-details-left) !important;
+    top: var(--custom-suggest-details-top) !important;
+    left: var(--custom-suggest-details-left) !important;
 }
 
 .suggest-widget .string-label {
@@ -133,14 +173,6 @@
     overflow-y: scroll !important;
     scrollbar-width: thin !important;
     scrollbar-color: var(--vscode-sash-hoverBorder) transparent !important;
-}
-
-.suggest-widget .monaco-sash.orthogonal-edge-south,
-.suggest-widget .monaco-sash.orthogonal-edge-north,
-.suggest-details-container .monaco-sash.vertical,
-.suggest-details-container .monaco-sash.orthogonal-edge-north,
-.suggest-details-container .monaco-sash.orthogonal-edge-south {
-    display: none !important;
 }
 
 .suggest-details-container .codicon-close,

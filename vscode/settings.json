@@ -100,17 +100,6 @@
 		"editor.action.clipboardCopyAction",
 		"editor.action.clipboardPasteAction",
 	],
-	"files.trimTrailingWhitespace": true,
-	"files.exclude": {
-		"**/out": true,
-		"**/bin": true,
-		"**/obj": true,
-		"**/.git": true,
-		"**/build": true,
-		"**/.venv": true,
-		"**/.vscode": true,
-		"**/__pycache__": true,
-	},
 	"debugpy.debugJustMyCode": true,
 	"csharp.debug.justMyCode": true,
 	"continue.showInlineTip": false,
@@ -126,7 +115,6 @@
 	"custom-ui-style.font.sansSerif": "JetBrains Mono Regular",
 	"custom-ui-style.font.monospace": "JetBrains Mono Regular",
 	"[python]": {
-		"editor.formatOnSave": true,
 		"editor.defaultFormatter": "ms-python.autopep8"
 	},
 	"custom-ui-style.electron": {

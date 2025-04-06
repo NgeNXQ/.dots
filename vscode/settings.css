@@ -16,9 +16,12 @@
 }
 
 .title.show-file-icons,
-.editor-group-container.empty,
-.composite.title:not(.has-composite-bar) {
+.editor-group-container.empty {
     -webkit-app-region: drag !important;
+}
+
+.cursor-block-style .cursor.monaco-mouse-cursor-text {
+    width: 8px !important;
 }
 
 .monaco-breadcrumbs .monaco-breadcrumb-item:first-of-type::before {
@@ -44,6 +47,10 @@
     color: var(--vscode-foreground) !important;
 }
 
+.editor-group-container.inactive .active-line-number {
+    color: var(--vscode-editorLineNumber-foreground) !important;
+}
+
 .squiggly-hint,
 .dirty-diff-glyph,
 .unicode-highlight,
@@ -65,7 +72,8 @@
     padding: 0 !important;
 }
 
-.monaco-hover-content .actions {
+.floating-click-widget,
+.monaco-hover-content .hover-row.status-bar {
     display: none !important;
 }
 
@@ -197,17 +205,16 @@
     order: 1;
 }
 
-.last-visible-item {
-    margin-right: 0 !important;
-}
-
-.first-visible-item {
-    padding-left: 0 !important;
-}
-
 .statusbar-item-label {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin: 0 !important;
+}
+
+.statusbar-item.last-visible-item {
+    padding-right: 0 !important;
+}
+
+.statusbar-item.first-visible-item {
+    padding-left: 0 !important;
 }
 
 /* Quick input */
@@ -255,10 +262,6 @@ input::placeholder {
 .global-actions,
 .includes-excludes {
     display: none !important;
-}
-
-.composite.viewlet.extensions-viewlet .header {
-    padding: 10px !important;
 }
 
 /* Bottom view */
@@ -324,4 +327,10 @@ input::placeholder {
 [id^="workbench.parts"] .composite.title:not(.has-composite-bar)>*,
 [id^="workbench.parts"]:has(.content .explorer-viewlet) .composite.title>*:not(:first-child) {
     display: none !important;
+}
+
+/* Extensions-viewlet */
+
+.composite.viewlet.extensions-viewlet .header:has(.extensions-search-container) {
+    padding: 10px !important;
 }

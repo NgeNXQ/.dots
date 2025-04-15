@@ -1361,24 +1361,29 @@
         "when": "editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
     },
     {
+        "key": "escape",
+        "command": "-codeium.supercompleteEscape",
+        "when": "codeium.supercompleteShown && editorTextFocus"
+    },
+    {
+        "key": "tab",
+        "command": "-codeium.tabJumpAccept",
+        "when": "codeium.tabJumpEnabled && codeium.tabJumpShown && editorTextFocus && !inlineSuggestionsVisible"
+    },
+    {
+        "key": "tab",
+        "command": "-codeium.supercompleteAccept",
+        "when": "codeium.supercompleteOnTab && codeium.supercompleteShown && editorTextFocus && !inlineSuggestionsVisible"
+    },
+    {
+        "key": "alt+.",
+        "command": "-codeium.forceSupercomplete",
+        "when": "editorTextFocus"
+    },
+    {
         "key": "ctrl+i",
         "command": "-codeium.openCodeiumCommand",
         "when": "codeium.commandEnabled && editorTextFocus && !inlineSuggestionsVisible"
-    },
-    {
-        "key": "ctrl+shift+i",
-        "command": "-codeium.openCodeiumCommand",
-        "when": "codeium.commandEnabled && editorTextFocus && !inlineSuggestionsVisible"
-    },
-    {
-        "key": "ctrl+shift+a",
-        "command": "-codeium.openChatView",
-        "when": "true"
-    },
-    {
-        "key": "ctrl+alt+a",
-        "command": "-codeium.openChatView",
-        "when": "false"
     },
     {
         "key": "alt+]",
@@ -1419,11 +1424,6 @@
     },
     {
         "key": "alt+.",
-        "command": "-codeium.forceSupercomplete",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+.",
         "command": "-codeium.showNextCortexStep"
     },
     {
@@ -1436,18 +1436,62 @@
         "when": "codeium.enableSmartCopy && editorTextFocus"
     },
     {
-        "key": "tab",
-        "command": "-codeium.tabJumpAccept",
-        "when": "codeium.tabJumpEnabled && codeium.tabJumpShown && editorTextFocus && !inlineSuggestionsVisible"
+        "key": "ctrl+shift+a",
+        "command": "-codeium.openChatView",
+        "when": "true"
     },
     {
-        "key": "escape",
-        "command": "-codeium.supercompleteEscape",
-        "when": "codeium.supercompleteShown && editorTextFocus"
+        "key": "ctrl+alt+a",
+        "command": "-codeium.openChatView",
+        "when": "false"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-codeium.openCodeiumCommand",
+        "when": "codeium.commandEnabled && editorTextFocus && !inlineSuggestionsVisible"
+    },
+    {
+        "key": "shift+delete",
+        "command": "-editor.action.clipboardCutAction"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "-workbench.action.terminal.copySelection",
+        "when": "terminalTextSelectedInFocused || terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected || terminalFocus && terminalTextSelected && terminalTextSelectedInFocused || terminalHasBeenCreated && terminalTextSelected && terminalTextSelectedInFocused || terminalProcessSupported && terminalTextSelected && terminalTextSelectedInFocused"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-workbench.action.terminal.copyAndClearSelection",
+        "when": "terminalTextSelectedInFocused || terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected || terminalFocus && terminalTextSelected && terminalTextSelectedInFocused || terminalHasBeenCreated && terminalTextSelected && terminalTextSelectedInFocused || terminalProcessSupported && terminalTextSelected && terminalTextSelectedInFocused"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "-workbench.action.terminal.selectToNextCommand",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "-workbench.action.terminal.selectToPreviousCommand",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
     {
         "key": "tab",
-        "command": "-codeium.supercompleteAccept",
-        "when": "codeium.supercompleteOnTab && codeium.supercompleteShown && editorTextFocus && !inlineSuggestionsVisible"
+        "command": "-workbench.action.terminal.acceptSelectedSuggestion",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
+    },
+    {
+        "key": "enter",
+        "command": "-workbench.action.terminal.acceptSelectedSuggestionEnter",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible && config.terminal.integrated.suggest.runOnEnter != 'ignore' || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible && config.terminal.integrated.suggest.runOnEnter != 'ignore'"
+    },
+    {
+        "key": "down",
+        "command": "-workbench.action.terminal.selectNextSuggestion",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
+    },
+    {
+        "key": "up",
+        "command": "-workbench.action.terminal.selectPrevSuggestion",
+        "when": "simpleSuggestWidgetHasNavigated && terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || simpleSuggestWidgetHasNavigated && terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible || terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible && !config.terminal.integrated.suggest.upArrowNavigatesHistory || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible && !config.terminal.integrated.suggest.upArrowNavigatesHistory"
     },
 ]

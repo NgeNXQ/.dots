@@ -11,10 +11,6 @@
     display: none !important;
 }
 
-.breadcrumbs-control.hidden {
-    display: block !important;
-}
-
 .title.show-file-icons,
 .editor-group-container.empty {
     -webkit-app-region: drag !important;
@@ -35,6 +31,11 @@
     border-radius: 5px 5px 0px 0px !important;
 }
 
+.terminal {
+    bottom: 5px !important;
+    padding-left: 10px !important;
+}
+
 .line-numbers {
     left: 5px !important;
 }
@@ -47,10 +48,6 @@
     color: var(--vscode-foreground) !important;
 }
 
-.editor-group-container.inactive .active-line-number {
-    color: var(--vscode-editorLineNumber-foreground) !important;
-}
-
 .squiggly-hint,
 .dirty-diff-glyph,
 .unicode-highlight,
@@ -61,8 +58,17 @@
     display: none !important;
 }
 
+.editor-group-container.inactive .active-line-number {
+    color: var(--vscode-editorLineNumber-foreground) !important;
+}
+
+.monaco-breadcrumbs .monaco-breadcrumb-item .monaco-icon-label::before {
+    padding-right: 2px !important;
+}
+
 .monaco-breadcrumbs .folder.monaco-breadcrumb-item .monaco-icon-label::before {
     content: '' !important;
+    margin-top: -1px !important;
     background-image: url(vscode-file://vscode-app/c:/Users/NgenX/.vscode/extensions/navernoedenis.gruvbox-material-icons-4.2.0/icons/folder~-2094932688.svg) !important;
 }
 

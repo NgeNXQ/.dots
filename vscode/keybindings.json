@@ -444,6 +444,11 @@
         "when": "editorFocus"
     },
     {
+        "key": "ctrl+d",
+        "command": "-notebook.addFindMatchToSelection",
+        "when": "config.notebook.multiCursor.enabled && notebookCellEditorFocused && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
         "key": "ctrl+w",
         "command": "-workbench.action.terminal.killEditor",
         "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
@@ -556,7 +561,7 @@
         "when": "workbench.panel.output.active"
     },
     {
-        "key": "ctrl+alt+d",
+        "key": "ctrl+d",
         "command": "workbench.debug.action.toggleRepl",
         "when": "workbench.panel.repl.view.active"
     },
@@ -871,11 +876,6 @@
         "key": "ctrl+shift+.",
         "command": "-breadcrumbs.toggleToOn",
         "when": "!config.breadcrumbs.enabled"
-    },
-    {
-        "key": "shift+alt",
-        "command": "editor.action.quickFix",
-        "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
     },
     {
         "key": "ctrl+.",
@@ -1493,5 +1493,20 @@
         "key": "up",
         "command": "-workbench.action.terminal.selectPrevSuggestion",
         "when": "simpleSuggestWidgetHasNavigated && terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || simpleSuggestWidgetHasNavigated && terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible || terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible && !config.terminal.integrated.suggest.upArrowNavigatesHistory || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible && !config.terminal.integrated.suggest.upArrowNavigatesHistory"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "-workbench.action.terminal.showQuickFixes",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "-problems.action.showQuickFixes",
+        "when": "problemFocus"
+    },
+    {
+        "key": "ctrl+d ctrl+b",
+        "command": "-dbcode.connections.view.focus",
+        "when": "editorHasMultipleSelections && !editorTextFocus && !terminalFocusInAny || editorHasSelection && !editorTextFocus && !terminalFocusInAny || !editorHasMultipleSelections && !editorHasSelection && !terminalFocusInAny"
     },
 ]

@@ -11,6 +11,11 @@
     display: none !important;
 }
 
+input::placeholder,
+textarea::placeholder {
+    color: transparent !important;
+}
+
 .title.show-file-icons,
 .editor-group-container.empty {
     -webkit-app-region: drag !important;
@@ -24,6 +29,12 @@
     width: 5px !important;
 }
 
+/* Codicons */
+
+.codicon-widget-close {
+    display: none !important;
+}
+
 /* Editor */
 
 .tab {
@@ -33,7 +44,7 @@
 
 .terminal {
     bottom: 1px !important;
-    padding-left: 5px !important;
+    padding-left: 10px !important;
 }
 
 .line-numbers {
@@ -81,6 +92,16 @@
 .floating-click-widget,
 .monaco-hover-content .hover-row.status-bar {
     display: none !important;
+}
+
+/* Find widget */
+
+.find-widget {
+    border: none !important;
+}
+
+.find-widget .find-part {
+    margin-right: 0 !important;
 }
 
 /* Zone widget */
@@ -224,10 +245,6 @@
 }
 
 /* Quick input */
-
-input::placeholder {
-    color: transparent !important;
-}
 
 .quick-input-widget {
     top: 35% !important;

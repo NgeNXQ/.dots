@@ -106,6 +106,7 @@
 	"terminal.integrated.cursorStyleInactive": "none",
 	"terminal.integrated.fontLigatures.enabled": true,
 	"terminal.integrated.suggest.showStatusBar": false,
+	"terminal.integrated.shellIntegration.showCommandGuide": false,
 	"terminal.integrated.shellIntegration.decorationsEnabled": "never",
 	"terminal.integrated.commandsToSkipShell": [
 		"workbench.view.scm",
@@ -142,6 +143,7 @@
 	"codeium.enableExplainProblem": false,
 	"codeium.enableCommandSideHintEducation": false,
 	"dotnetAcquisitionExtension.enableTelemetry": false,
+	"dbcode.ai.inlineCompletion": false,
 	"breakpointHighlight.backgroundColor": "#501c1cFF",
 	"errorLens.codeLensOnClick": "none",
 	"errorLens.padding": "0 0.5ch 0.01ch 0.5ch",
@@ -163,11 +165,11 @@
 		"file:///C:/Users/NgenX/AppData/Roaming/Code/User/settings.js",
 		"file:///C:/Users/NgenX/AppData/Roaming/Code/User/settings.css",
 	],
+	"custom-ui-style.background.url": "file:///C:/Users/NgenX/AppData/Roaming/Code/User/wallpaper.jpg",
 	"[python]": {
 		"editor.defaultFormatter": "ms-python.autopep8"
 	},
 	"workbench.colorTheme": "Gruvbox Dark Hard",
 	"workbench.iconTheme": "gruvbox-material-icons",
 	"gruvbox-material-icons.folders.theme": "classic",
-	"terminal.integrated.shellIntegration.showCommandGuide": false,
 }

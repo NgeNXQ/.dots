@@ -1,6 +1,3 @@
-let windowTitle;
-let explorerTitleLabel;
-
 let suggestWidget;
 let monacoListRows;
 let suggestDetailsContainer;
@@ -37,32 +34,6 @@ function changeSuggest() {
     });
 }
 
-function changeExplorerTitle() {
-    getElementWithInterval('.pane-composite-part:has(.content .explorer-viewlet) .composite.title .title-label h2').then(element => {
-        explorerTitleLabel = element;
-
-        const observer = new MutationObserver(() => {
-            if (explorerTitleLabel && windowTitle) {
-                explorerTitleLabel.textContent = windowTitle.textContent.trim();
-            }
-        });
-
-        observer.observe(explorerTitleLabel, { childList: true });
-    });
-
-    getElementWithInterval('.window-title').then(element => {
-        windowTitle = element;
-
-        const observer = new MutationObserver(() => {
-            if (explorerTitleLabel && windowTitle) {
-                explorerTitleLabel.textContent = windowTitle.textContent.trim();
-            }
-        });
-
-        observer.observe(windowTitle, { childList: true });
-    });
-}
-
 function changeSuggestDetails() {
     getElementWithInterval('.suggest-details-container').then(element => {
         suggestDetailsContainer = element;
@@ -83,6 +54,5 @@ function changeSuggestDetails() {
 
 document.addEventListener('DOMContentLoaded', () => {
     changeSuggest();
-    changeExplorerTitle();
     changeSuggestDetails();
 });

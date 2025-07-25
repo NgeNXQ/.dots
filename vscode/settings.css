@@ -258,7 +258,6 @@ textarea::placeholder {
 
 .quick-input-widget {
     top: 35% !important;
-    outline: 1px solid var(--vscode-focusBorder, var(--vscode-input-border)) !important;
 }
 
 .quick-input-header {

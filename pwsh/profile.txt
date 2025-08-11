@@ -1,0 +1,4 @@
+function prompt {
+    $host.UI.RawUI.WindowTitle = "$(Get-Location)"
+    "↳ "
+}

@@ -1,3 +1,9 @@
+/* Acrylic */
+
+.monaco-workbench {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
 /* Application */
 
 .slider,
@@ -37,6 +43,10 @@ textarea::placeholder {
     display: none !important;
 }
 
+.codicon-breadcrumb-separator::before {
+    content: '\eb70' !important;
+}
+
 /* Editor */
 
 .tab {
@@ -45,6 +55,7 @@ textarea::placeholder {
 }
 
 .terminal {
+    bottom: 5px !important;
     padding-left: 5px !important;
 }
 
@@ -80,12 +91,6 @@ textarea::placeholder {
     padding-right: 2px !important;
 }
 
-.monaco-breadcrumbs .folder.monaco-breadcrumb-item .monaco-icon-label::before {
-    content: '' !important;
-    margin-top: -1px !important;
-    background-image: url(vscode-file://vscode-app/c:/Users/NgenX/.vscode/extensions/navernoedenis.gruvbox-material-icons-4.2.0/icons/folder~-2094932688.svg) !important;
-}
-
 /* Widgets */
 
 .monaco-hover-content {
@@ -101,6 +106,10 @@ textarea::placeholder {
 
 .find-widget {
     border: none !important;
+}
+
+.matchesCount {
+    display: none !important;
 }
 
 .find-widget .find-part {
@@ -232,14 +241,6 @@ textarea::placeholder {
 
 /* Status bar */
 
-#status\.scm\.0 {
-    order: 2;
-}
-
-#status\.problems {
-    order: 1;
-}
-
 .statusbar-item-label {
     margin: 0 !important;
 }
@@ -350,20 +351,4 @@ textarea::placeholder {
 
 .composite.viewlet.extensions-viewlet .header:has(.extensions-search-container) {
     padding: 10px !important;
-}
-
-/* Acrylic colors */
-
-.title,
-.find-widget,
-.monaco-inputbox {
-    background-color: transparent !important;
-}
-
-.statusbar {
-    --status-border-top-color: transparent !important;
-}
-
-.monaco-workbench {
-    background-color: rgba(0, 0, 0, 0.75) !important;
 }

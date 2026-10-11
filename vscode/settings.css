@@ -1,22 +1,31 @@
-/* Acrylic */
-
-.monaco-workbench {
-    background-color: rgba(0, 0, 0, 0.75) !important;
-}
-
 /* Application */
 
 .slider,
 .shadow,
+.actions,
 .shortcuts,
+.scrollbar,
 .monaco-sash,
 .window-title,
 .window-appicon,
+.xterm-scrollbar,
+.findOptionsWidget,
 .scroll-decoration,
-.scrollbar.vertical,
-.scrollbar.horizontal,
+.action-item.disabled,
+.breadcrumbs-editor-type,
 .pane-composite-part .composite.title:not(.has-composite-bar)>* {
     display: none !important;
+}
+
+.monaco-workbench,
+.monaco-list-rows {
+    background-color: transparent !important;
+}
+
+input,
+textarea {
+    caret-shape: block !important;
+    caret-color: var(--vscode-input-foreground) !important;
 }
 
 input::placeholder,
@@ -59,27 +68,45 @@ textarea::placeholder {
     padding-left: 5px !important;
 }
 
-.line-numbers {
-    left: 5px !important;
+.exact-line {
+    background-color: var(--vscode-list-inactiveSelectionBackground) !important;
 }
 
-.detected-link {
-    text-decoration: none !important;
+.line-numbers {
+    left: 5px !important;
 }
 
 .active-line-number {
     color: var(--vscode-foreground) !important;
 }
 
+.native-edit-context {
+    margin-left: -100% !important;
+}
+
+.detected-link,
+.squiggly-inline-deprecated {
+    text-decoration: none !important;
+}
+
 .squiggly-hint,
+.wordHighlight,
 .dirty-diff-glyph,
 .unicode-highlight,
 .folded-background,
-.terminal-initial-hint,
+.wordHighlightStrong,
+.terminal-resize-overlay,
+.debug-top-stack-frame-column,
+.monaco-editor-background.top-left-radius,
+.monaco-editor-background.top-right-radius,
+.monaco-editor-background.bottom-left-radius,
+.monaco-editor-background.bottom-right-radius,
 .decorationsOverviewRuler,
 .codicon-search-show-context,
 .xterm-decoration-overview-ruler,
-.editor-group-container-toolbar .action-item {
+.editor-group-container-toolbar .action-item,
+.view-overlays>div:has(.selected-text ~ .selected-text)> :nth-child(1),
+.view-overlays>div:has(.selected-text ~ .selected-text ~ .selected-text)> :nth-child(3) {
     display: none !important;
 }
 
@@ -146,7 +173,8 @@ textarea::placeholder {
     padding: 0 !important;
 }
 
-.rename-box .rename-label {
+.rename-box .rename-label,
+.rename-suggestions-button {
     display: none !important;
 }
 
@@ -225,14 +253,25 @@ textarea::placeholder {
 /* Breakpoint widget */
 
 .breakpoint-widget {
-    border-color: var(--vscode-foreground) !important;
+    border-color: transparent !important;
 }
 
-.breakpoint-widget .view-line *::after {
+.breakpoint-widget .select-breakpoint-container,
+.breakpoint-widget .view-line>span>span:nth-child(2)::after {
     display: none !important;
 }
 
+.breakpoint-widget .inputContainer .monaco-editor,
+.breakpoint-widget .inputContainer .monaco-mouse-cursor-text,
+.breakpoint-widget .inputContainer .monaco-scrollable-element {
+    height: 19px !important;
+}
+
 /* Debug-hover widget */
+
+.debug-hover-widget .tip {
+    display: none !important;
+}
 
 .debug-hover-widget .complex-value {
     width: 100% !important;
@@ -240,6 +279,14 @@ textarea::placeholder {
 }
 
 /* Status bar */
+
+#status\.scm\.0 {
+    order: 2 !important;
+}
+
+#status\.problems {
+    order: 1 !important;
+}
 
 .statusbar-item-label {
     margin: 0 !important;
@@ -258,11 +305,12 @@ textarea::placeholder {
 /* Quick input */
 
 .quick-input-widget {
-    top: 35% !important;
+    backdrop-filter: blur(1px) saturate(100%) brightness(25%) !important;
 }
 
 .quick-input-header {
     padding: 5px !important;
+    cursor: default !important;
 }
 
 .quick-input-message {
@@ -324,27 +372,39 @@ textarea::placeholder {
 
 /* Search editor */
 
+.search-editor .margin {
+    display: none !important;
+}
+
+.search-editor .query-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 26px !important;
+    background-color: #00000080 !important;
+}
+
 .search-editor .editor-scrollable {
-    left: 19px !important;
+    left: 0 !important;
+    width: 100% !important;
 }
 
 /* Debug-viewlet */
 
-.debug-viewlet .load-all {
-    display: none !important;
-}
-
-.debug-viewlet .line-number {
-    background-color: transparent !important;
+.debug-viewlet .monaco-count-badge {
     color: var(--vscode-foreground) !important;
+    background-color: transparent !important;
 }
 
-.debug-viewlet input[type="checkbox"] {
-    margin: 3px 6px 3px 3px;
+/* Explorer-viewlet */
+
+.pane-composite-part:has(.explorer-viewlet) .composite.title .title-label {
+    display: block !important;
+    pointer-events: none !important;
 }
 
-.debug-viewlet .debug-breakpoints .monaco-action-bar {
-    display: none !important;
+.pane-composite-part:has(.explorer-viewlet) .composite.title .title-label h2 {
+    content: "~\\" !important;
+    text-transform: none !important;
 }
 
 /* Extensions-viewlet */

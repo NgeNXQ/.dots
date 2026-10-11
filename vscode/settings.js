@@ -1,6 +1,8 @@
 let suggestWidget;
 let monacoListRows;
-let suggestDetailsContainer;
+let monacoBreadcrumbs;
+let explorerTitleLabel;
+let explorerTitleLabelH2;
 
 function getElementWithInterval(selector, pollingInterval = 10) {
     return new Promise((resolve) => {
@@ -34,11 +36,49 @@ function changeSuggest() {
     });
 }
 
-function changeSuggestDetails() {
-    getElementWithInterval('.suggest-details-container').then(element => {
-        suggestDetailsContainer = element;
+function changeExplorerTitle() {
+    const labelsBuffer = [];
+
+    function updateExplorerTitle() {
+        const folderLabels = monacoBreadcrumbs.querySelectorAll('.folder .label-name');
+
+        let newTitle;
+
+        if (folderLabels.length === 0) {
+            newTitle = "~\\";
+        }
+        else {
+            labelsBuffer.length = 0;
+
+            for (let i = 0; i < folderLabels.length; i++) {
+                labelsBuffer.push(folderLabels[i].textContent);
+            }
+
+            newTitle = "~\\" + labelsBuffer.join("\\");
+        }
+
+        if (explorerTitleLabelH2.textContent !== newTitle) {
+            explorerTitleLabelH2.textContent = newTitle;
+        }
+    }
+
+    getElementWithInterval('.monaco-breadcrumbs').then(element => {
+        monacoBreadcrumbs = element;
+
+        const observer = new MutationObserver(updateExplorerTitle);
+        observer.observe(monacoBreadcrumbs, { childList: true });
     });
 
+    getElementWithInterval('.sidebar.pane-composite-part:has(.explorer-viewlet) .composite.title .title-label').then(element => {
+        explorerTitleLabel = element;
+        explorerTitleLabelH2 = explorerTitleLabel.querySelector('h2');
+
+        const observer = new MutationObserver(updateExplorerTitle);
+        observer.observe(explorerTitleLabel, { childList: true, subtree: true });
+    });
+}
+
+function changeSuggestDetails() {
     getElementWithInterval('.suggest-widget').then(element => {
         suggestWidget = element;
 
@@ -54,5 +94,6 @@ function changeSuggestDetails() {
 
 document.addEventListener('DOMContentLoaded', () => {
     changeSuggest();
+    changeExplorerTitle();
     changeSuggestDetails();
 });

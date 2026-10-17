@@ -1,4 +1,6 @@
 {
+    "scm.diffDecorations": "gutter",
+    "git.decorations.enabled": true,
     "git.openRepositoryInParentFolders": "always",
     "update.mode": "none",
     "search.mode": "reuseEditor",
@@ -22,6 +24,7 @@
     "editor.colorDecorators": false,
     "editor.renderWhitespace": "trailing",
     "editor.snippetSuggestions": "none",
+    "editor.renderLineHighlight": "line",
     "editor.overviewRulerBorder": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.cursorSmoothCaretAnimation": "on",
@@ -46,15 +49,40 @@
         "textMateRules": [
             {
                 "scope": [
-                    "storage.type.ts",
-                    "storage.type.tsx",
-                    "storage.type.function.ts",
-                    "storage.type.function.tsx",
-                    "storage.modifier.ts",
-                    "storage.modifier.tsx",
+                    "storage.type",
+                    "storage.modifier",
+                    "keyword.operator.new",
+                    "keyword.operator.expression",
+                    "variable.language.this",
+                    "variable.language.super",
                 ],
                 "settings": {
                     "foreground": "#FB4934"
+                }
+            },
+            {
+                "scope": [
+                    "storage.type.function.arrow",
+                    "keyword.operator.logical",
+                ],
+                "settings": {
+                    "foreground": "#8EC07C"
+                }
+            },
+            {
+                "scope": [
+                    "storage.type.numeric",
+                ],
+                "settings": {
+                    "foreground": "#D3869B"
+                }
+            },
+            {
+                "scope": [
+                    "support.variable.property",
+                ],
+                "settings": {
+                    "foreground": "#83A598"
                 }
             }
         ]
@@ -64,11 +92,12 @@
     "workbench.tree.enableStickyScroll": false,
     "workbench.tree.renderIndentGuides": "always",
     "workbench.list.smoothScrolling": true,
+    "workbench.editor.empty.hint": "hidden",
     "workbench.editor.showTabs": "none",
     "workbench.editor.enablePreview": false,
+    "workbench.editor.navigationScope": "editor",
     "workbench.editor.editorActionsLocation": "hidden",
     "workbench.editor.titleScrollbarVisibility": "hidden",
-    "workbench.editor.empty.hint": "hidden",
     "workbench.sideBar.location": "right",
     "workbench.statusBar.visible": false,
     "workbench.activityBar.location": "hidden",
@@ -79,7 +108,6 @@
     "debug.toolBarLocation": "hidden",
     "debug.breakpointsView.presentation": "tree",
     "debug.enableStatusBarColor": false,
-    "explorer.autoReveal": "focusNoScroll",
     "explorer.confirmDelete": false,
     "explorer.compactFolders": false,
     "explorer.excludeGitIgnore": true,

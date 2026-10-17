@@ -6050,12 +6050,12 @@
     {
         "key": "escape",
         "command": "workbench.action.closeActiveEditor",
-        "when": "inSearchEditor || terminalEditorFocus || (editorTextFocus && !renameInputVisible && !suggestWidgetVisible && !parameterHintsVisible && !breakpointWidgetVisible && !editorHasMultipleSelections)"
+        "when": "inSearchEditor || terminalEditorFocus || (editorTextFocus && !renameInputVisible && !closeReferenceSearch && !suggestWidgetVisible && !parameterHintsVisible && !breakpointWidgetVisible && !editorHasMultipleSelections)"
     },
     {
         "key": "shift+escape",
         "command": "workbench.action.closeEditorsAndGroup",
-        "when": "inSearchEditor || terminalEditorFocus || (editorTextFocus && !renameInputVisible && !suggestWidgetVisible && !parameterHintsVisible && !breakpointWidgetVisible && !editorHasMultipleSelections)"
+        "when": "inSearchEditor || terminalEditorFocus || (editorTextFocus && !renameInputVisible && !closeReferenceSearch && !suggestWidgetVisible && !parameterHintsVisible && !breakpointWidgetVisible && !editorHasMultipleSelections)"
     },
     {
         "key": "escape",
@@ -6225,6 +6225,11 @@
         "command": "workbench.actions.view.problems",
     },
     {
+        "key": "escape",
+        "command": "closeReferenceSearch",
+        "when": "referenceSearchVisible"
+    },
+    {
         "key": "alt+j",
         "command": "editor.action.goToImplementation",
         "when": "editorHasImplementationProvider && editorTextFocus"
@@ -6233,11 +6238,6 @@
         "key": "ctrl+j",
         "command": "editor.action.revealDefinition",
         "when": "editorHasDefinitionProvider && editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+j",
-        "command": "editor.action.goToReferences",
-        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
     },
     {
         "key": "ctrl+e",
@@ -6578,9 +6578,19 @@
         "when": "editorTextFocus"
     },
     {
+        "key": "ctrl+pageup",
+        "command": "workbench.action.navigateForward",
+        "when": "editorTextFocus && canNavigateForward"
+    },
+    {
         "key": "pagedown",
         "command": "editor.action.insertCursorBelow",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "workbench.action.navigateBack",
+        "when": "editorTextFocus && canNavigateBack"
     },
     {
         "key": "ctrl+w",
@@ -6681,5 +6691,5 @@
         "key": "ctrl+shift+f5",
         "command": "workbench.action.debug.restart",
         "when": "inDebugMode"
-    }
+    },
 ]

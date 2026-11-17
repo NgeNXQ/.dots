@@ -1,4 +1,3 @@
-// Override key bindings by placing them into your key bindings file.
 [
     {
         "key": "escape escape",
@@ -5830,28 +5829,9 @@
         "when": "markdownEditorFocus && activeCustomEditorId == 'vscode.markdown.editor'"
     },
     {
-        "key": "ctrl+shift+enter",
-        "command": "-csdevkit.debug.hotReload",
-        "when": "hotReloadEnabled"
-    },
-    {
-        "key": "ctrl+enter",
-        "command": "-dbcode.editor.execute",
-        "when": "editorTextFocus && !notebookCellListFocused && editorLangId == 'sql' && resourceScheme != 'dbcode' || editorTextFocus && !notebookCellListFocused && resourceScheme != 'dbcode' && resourceFilename =~ /.sql$/"
-    },
-    {
-        "key": "ctrl+g",
-        "command": "-hexEditor.goToOffset",
-        "when": "activeCustomEditorId == 'hexEditor.hexedit'"
-    },
-    {
-        "key": "ctrl+shift+f9",
-        "command": "-o.showOutput"
-    },
-    {
-        "key": "shift+enter",
-        "command": "-python.execSelectionInTerminal",
-        "when": "editorTextFocus && !findInputFocussed && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+        "key": "ctrl+c",
+        "command": "-solutionViewer.copy",
+        "when": "!inputFocus && focusedView == 'solutionViewer'"
     },
     {
         "key": "ctrl+enter",
@@ -5874,22 +5854,9 @@
         "when": "chatAttachmentResource"
     },
     {
-        "key": "ctrl+shift+enter",
-        "command": "-dbcode.editor.execute",
-        "when": "editorHasSelection && editorTextFocus && !notebookCellListFocused && editorLangId == 'sql' || editorHasSelection && editorTextFocus && !notebookCellListFocused && resourceFilename =~ /.sql$/ || editorTextFocus && !notebookCellListFocused && editorLangId == 'sql' && resourceScheme != 'dbcode' || editorTextFocus && !notebookCellListFocused && resourceScheme != 'dbcode' && resourceFilename =~ /.sql$/",
-        "args": {
-            "shiftKey": true
-        }
-    },
-    {
-        "key": "ctrl+alt+c",
-        "command": "-hexEditor.copyAs",
-        "when": "activeCustomEditorId == 'hexEditor.hexedit'"
-    },
-    {
-        "key": "shift+enter",
-        "command": "-python.execInREPL",
-        "when": "config.python.REPL.sendToNativeREPL && editorTextFocus && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && editorLangId == 'python'"
+        "key": "ctrl+x",
+        "command": "-solutionViewer.cut",
+        "when": "!inputFocus && focusedView == 'solutionViewer'"
     },
     {
         "key": "ctrl+i",
@@ -5902,79 +5869,81 @@
         "when": "simpleSuggestWidgetHasFocusedSuggestion && terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || simpleSuggestWidgetHasFocusedSuggestion && terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
     },
     {
-        "key": "ctrl+alt+enter",
-        "command": "-dbcode.editor.execute",
-        "when": "editorHasSelection && editorTextFocus && !notebookCellListFocused && editorLangId == 'sql' || editorHasSelection && editorTextFocus && !notebookCellListFocused && resourceFilename =~ /.sql$/ || editorTextFocus && !notebookCellListFocused && editorLangId == 'sql' && resourceScheme != 'dbcode' || editorTextFocus && !notebookCellListFocused && resourceScheme != 'dbcode' && resourceFilename =~ /.sql$/",
-        "args": {
-            "altKey": true
-        }
+        "key": "ctrl+v",
+        "command": "-solutionViewer.paste",
+        "when": "!inputFocus && focusedView == 'solutionViewer'"
     },
     {
-        "key": "insert",
-        "command": "-hexEditor.switchEditMode",
-        "when": "hexEditor:isActive"
+        "key": "delete",
+        "command": "-solutionViewer.delete",
+        "when": "!inputFocus && focusedView == 'solutionViewer'"
     },
     {
-        "key": "enter",
-        "command": "-python.execInREPLEnter",
-        "when": "isCompositeNotebook && !config.interactiveWindow.executeWithShiftEnter && !inlineChatFocused && !notebookCellListFocused && activeEditor == 'workbench.editor.repl'"
+        "key": "f2",
+        "command": "-solutionViewer.rename",
+        "when": "!inputFocus && focusedView == 'solutionViewer'"
     },
     {
-        "key": "ctrl+alt+c",
-        "command": "-dbcode.editor.copyQuery",
-        "when": "editorTextFocus && editorLangId == 'sql' || editorTextFocus && resourceFilename =~ /.sql$/"
+        "key": "shift+f2",
+        "command": "-solutionViewer.quickAdd",
+        "when": "!inputFocus && focusedView == 'solutionViewer'"
     },
     {
-        "key": "enter",
-        "command": "-python.execInInteractiveWindowEnter",
-        "when": "isCompositeNotebook && !config.interactiveWindow.executeWithShiftEnter && !inlineChatFocused && !notebookCellListFocused && activeEditor == 'workbench.editor.interactive'"
+        "key": "shift+alt+l",
+        "command": "-solutionViewer.revealCurrentFile"
     },
     {
-        "key": "ctrl+shift+e",
-        "command": "-dbcode.editor.expandStar",
-        "when": "editorTextFocus && editorLangId == 'sql' || editorTextFocus && resourceFilename =~ /.sql$/"
+        "key": "alt+p",
+        "command": "-csharp-dev-tools.advancedSearch"
     },
     {
-        "key": "ctrl+enter",
-        "command": "-dbcode.editor.execute",
-        "when": "editorHasSelection && editorTextFocus && resourceScheme == 'dbcode'"
+        "key": "alt+w",
+        "command": "-csharp-dev-tools.openWalkthroughs"
     },
     {
-        "key": "ctrl+enter",
-        "command": "-dbcode.editor.apply",
-        "when": "editorTextFocus && !editorHasSelection && resourceScheme == 'dbcode'"
+        "key": "ctrl+shift+f5",
+        "command": "-csharp-dev-tools.selectStartupProject",
+        "when": "solutionViewer.solutionFound && workspaceFolderCount > 0"
     },
     {
-        "key": "ctrl+unknown",
-        "command": "-dbcode.connections.quickOpen"
+        "key": "ctrl+f5",
+        "command": "-csharp-dev-tools.editorRunProgram",
+        "when": "csharpExtensionActive && solutionViewer.solutionFound && !inDebugMode"
     },
     {
-        "key": "ctrl+shift+unknown",
-        "command": "-dbcode.connections.select",
-        "when": "editorTextFocus && !notebookCellListFocused && editorLangId == 'sql' && resourceScheme != 'dbcode' || editorTextFocus && !notebookCellListFocused && resourceScheme != 'dbcode' && resourceFilename =~ /.sql$/",
-        "args": {
-            "contextAware": true
-        }
+        "key": "f5",
+        "command": "-csharp-dev-tools.editorDebugProgram",
+        "when": "csharpExtensionActive && solutionViewer.solutionFound && !inDebugMode"
     },
     {
-        "key": "ctrl+d ctrl+b",
-        "command": "-dbcode.connections.view.focus",
-        "when": "editorHasMultipleSelections && !editorTextFocus && !terminalFocusInAny || editorHasSelection && !editorTextFocus && !terminalFocusInAny || !editorHasMultipleSelections && !editorHasSelection && !terminalFocusInAny"
+        "key": "shift+alt+p",
+        "command": "-bookmarks.goToPreviousBookmark"
     },
     {
-        "key": "ctrl+c",
-        "command": "-dbcode.connections.copyElementLabel",
-        "when": "focusedView == 'dbcode.connections.view'"
+        "key": "shift+alt+]",
+        "command": "-bookmarks.goToNextBookmark"
     },
     {
-        "key": "f4",
-        "command": "-dbcode.script.ddl",
-        "when": "focusedView == 'dbcode.connections.view'"
+        "key": "shift+alt+[",
+        "command": "-bookmarks.toggleBookmark"
     },
     {
-        "key": "enter",
-        "command": "-dbcode.item.open",
-        "when": "listFocus && !inputFocus && focusedView == 'dbcode.connections.view'"
+        "key": "shift+alt+-",
+        "command": "-bookmarks.showBookmarkList"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "-solutionViewer.buildSolution",
+        "when": "solutionViewer.solutionFound"
+    },
+    {
+        "key": "shift+alt+k",
+        "command": "-workbench.actions.treeView.solutionViewer.collapseAll"
+    },
+    {
+        "key": "ctrl+alt+t",
+        "command": "-csharp-dev-tools.surroundWith",
+        "when": "editorHasSelection && editorTextFocus && resourceLangId == 'aspnetcorerazor' || editorHasSelection && editorTextFocus && resourceLangId == 'csharp' || editorHasSelection && editorTextFocus && resourceLangId == 'razor'"
     },
     {
         "key": "ctrl+.",
@@ -6046,16 +6015,16 @@
         "command": "-diffEditor.exitCompareMove",
         "when": "comparingMovedCode"
     },
-    //
+    {},
     {
         "key": "escape",
         "command": "workbench.action.closeActiveEditor",
-        "when": "inSearchEditor || terminalEditorFocus || (editorTextFocus && !renameInputVisible && !closeReferenceSearch && !suggestWidgetVisible && !parameterHintsVisible && !breakpointWidgetVisible && !editorHasMultipleSelections)"
+        "when": "inSearchEditor || terminalEditorFocus || activeWebviewPanelId == 'markdown.preview' || (editorTextFocus && !renameInputVisible && !closeReferenceSearch && !suggestWidgetVisible && !parameterHintsVisible && !breakpointWidgetVisible && !editorHasMultipleSelections)"
     },
     {
         "key": "shift+escape",
         "command": "workbench.action.closeEditorsAndGroup",
-        "when": "inSearchEditor || terminalEditorFocus || (editorTextFocus && !renameInputVisible && !closeReferenceSearch && !suggestWidgetVisible && !parameterHintsVisible && !breakpointWidgetVisible && !editorHasMultipleSelections)"
+        "when": "inSearchEditor || terminalEditorFocus || activeWebviewPanelId == 'markdown.preview' || (editorTextFocus && !renameInputVisible && !closeReferenceSearch && !suggestWidgetVisible && !parameterHintsVisible && !breakpointWidgetVisible && !editorHasMultipleSelections)"
     },
     {
         "key": "escape",
@@ -6116,17 +6085,11 @@
     },
     {
         "key": "ctrl+tab",
-        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-        "when": "!inEditorsPicker && !activeEditorGroupEmpty"
-    },
-    {
-        "key": "ctrl+tab",
-        "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
-        "when": "inEditorsPicker"
+        "command": "workbench.action.showEditorsInGroup",
     },
     {
         "key": "shift+tab",
-        "command": "workbench.action.focusNextGroup"
+        "command": "workbench.action.showAllEditors"
     },
     {
         "key": "tab",
@@ -6210,7 +6173,7 @@
     },
     {
         "key": "ctrl+h",
-        "command": "workbench.action.togglePanel",
+        "command": "workbench.action.togglePanel"
     },
     {
         "key": "ctrl+i",
@@ -6218,11 +6181,11 @@
     },
     {
         "key": "ctrl+o",
-        "command": "workbench.action.output.toggleOutput",
+        "command": "workbench.action.output.toggleOutput"
     },
     {
         "key": "ctrl+p",
-        "command": "workbench.actions.view.problems",
+        "command": "workbench.actions.view.problems"
     },
     {
         "key": "escape",
@@ -6252,6 +6215,11 @@
     {
         "key": "up",
         "command": "list.focusUp",
+        "when": "!inputFocus && filesExplorerFocus"
+    },
+    {
+        "key": "ctrl+u",
+        "command": "list.focusParent",
         "when": "!inputFocus && filesExplorerFocus"
     },
     {
@@ -6691,5 +6659,5 @@
         "key": "ctrl+shift+f5",
         "command": "workbench.action.debug.restart",
         "when": "inDebugMode"
-    },
+    }
 ]

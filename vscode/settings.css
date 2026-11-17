@@ -1,13 +1,10 @@
 :root {
     --custom-gutter-width: 2px;
     --custom-widget-width: 430px;
+    --custom-modified-color: #83A598;
     --custom-reference-width: 875px;
     --custom-suggest-max-height: 228px;
     --custom-details-max-height: 230px;
-    --custom-modified-color: #83A598;
-    --custom-breakpoint-background: #501c1cFF;
-    --custom-quick-input-background: rgb(29 32 33 / 65%);
-    --custom-quick-input-blur: 3px;
 }
 
 /* Application */
@@ -35,7 +32,8 @@
     width: 8px !important;
 }
 
-.monaco-list-rows,
+/* .monaco-list-rows, */
+
 .monaco-workbench {
     background-color: transparent !important;
 }
@@ -73,20 +71,11 @@ textarea::placeholder {
 /* Editor */
 
 .terminal {
-    bottom: 5px !important;
     padding-left: 5px !important;
-}
-
-.exact-line {
-    background-color: var(--vscode-list-inactiveSelectionBackground) !important;
 }
 
 .line-numbers {
     left: 5px !important;
-}
-
-.active-line-number {
-    color: var(--vscode-foreground) !important;
 }
 
 .native-edit-context {
@@ -158,10 +147,6 @@ textarea::placeholder {
 .dirty-diff-deleted::after,
 .dirty-diff-modified::before {
     display: none !important;
-}
-
-.editor-group-container.inactive .active-line-number {
-    color: var(--vscode-editorLineNumber-foreground) !important;
 }
 
 /* Widgets */
@@ -249,9 +234,9 @@ textarea::placeholder {
 /* Suggest widget */
 
 .suggest-widget {
-    border-radius: 0 !important;
-    max-height: var(--custom-suggest-max-height) !important;
     height: var(--custom-suggest-height) !important;
+    max-height: var(--custom-suggest-max-height) !important;
+    border-radius: 0 !important;
 }
 
 .codicon-suggest-more-info,
@@ -344,8 +329,7 @@ textarea::placeholder {
 /* Quick input */
 
 .quick-input-widget {
-    background-color: var(--custom-quick-input-background) !important;
-    backdrop-filter: var(--custom-quick-input-filter, blur(var(--custom-quick-input-blur))) !important;
+    top: 25% !important;
 }
 
 .quick-input-header {
@@ -431,32 +415,4 @@ textarea::placeholder {
 
 .composite.viewlet.extensions-viewlet .header:has(.extensions-search-container) {
     padding: 10px !important;
-}
-
-/* Breakpoint line-number margin */
-.monaco-editor .custom-ui-breakpoint-margin {
-    background-color: var(--custom-breakpoint-background) !important;
-}
-
-html[data-breakpoint-experiment="active"] .monaco-editor .debug-top-stack-frame-line,
-html[data-breakpoint-experiment="active"] .monaco-editor .debug-focused-stack-frame-line {
-    background-color: transparent !important;
-}
-
-.monaco-editor .custom-ui-debug-top-margin {
-    background-color: var(--vscode-editor-stackFrameHighlightBackground, #50501CFF) !important;
-}
-
-.monaco-editor .custom-ui-debug-focused-margin {
-    background-color: var(--vscode-editor-focusedStackFrameHighlightBackground, #1C501CFF) !important;
-}
-
-/* Explorer and Debug viewlet layout */
-.sidebar.pane-composite-part[data-viewlet-layout-fix="active"],
-.sidebar.pane-composite-part[data-viewlet-layout-fix="active"] .content,
-.sidebar.pane-composite-part[data-viewlet-layout-fix="active"] .split-view-view,
-.auxiliarybar.pane-composite-part[data-viewlet-layout-fix="active"],
-.auxiliarybar.pane-composite-part[data-viewlet-layout-fix="active"] .content,
-.auxiliarybar.pane-composite-part[data-viewlet-layout-fix="active"] .split-view-view {
-    height: var(--viewlet-native-height, 100%) !important;
 }
